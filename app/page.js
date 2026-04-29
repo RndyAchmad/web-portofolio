@@ -91,7 +91,7 @@ export default function Home() {
           <div className="glass p-8 rounded-2xl border-l-4 border-primary">
             <h3 className="text-xl font-bold text-white">UPN "Veteran" Jawa Timur</h3>
             <p className="text-text-secondary italic">{t.education.degree}</p>
-            <p className="text-lg font-semibold text-primary mt-2">GPA 3.83 / 4.00</p>
+            <p className="text-lg font-semibold text-primary mt-2">{t.education.gpa}</p>
           </div>
         </section>
 

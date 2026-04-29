@@ -9,7 +9,11 @@ export const translations = {
             cta_linkedin: "LinkedIn Profile",
             cta_github: "GitHub Portfolio"
         },
-        education: { title: "Education", degree: "Information Systems Major" },
+        education: {
+            title: "Education",
+            degree: "Information Systems Major",
+            gpa: "GPA 3.83 / 4.00"
+        },
         skills: { title: "Core Skills", lang: "Programming Languages", stack: "Tech Stack & Frameworks" },
         experience: {
             title: "Professional Experience",
@@ -43,7 +47,11 @@ export const translations = {
             cta_linkedin: "Profil LinkedIn",
             cta_github: "Portofolio GitHub"
         },
-        education: { title: "Pendidikan", degree: "Jurusan Sistem Informasi" },
+        education: {
+            title: "Pendidikan",
+            degree: "Jurusan Sistem Informasi",
+            gpa: "IPK 3.83 / 4.00"
+        },
         skills: { title: "Keahlian Utama", lang: "Bahasa Pemrograman", stack: "Teknologi & Framework" },
         experience: {
             title: "Pengalaman Profesional",
