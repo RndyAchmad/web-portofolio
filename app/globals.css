@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #09090b;
+  --foreground: #fafafa;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  /* Warna yang sudah kita buat sebelumnya */
+  --color-bg: #09090b;
+  --color-surface: #121214;
+  --color-primary: #06b6d4;
+  --color-primary-hover: #0891b2;
+  --color-text-secondary: #a1a1aa;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* --- TAMBAHKAN ANIMASI DI SINI --- */
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-spin-reverse-slow: spin-reverse 15s linear infinite;
+
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg);
+    }
   }
+}
+
+/* Utilitas tambahan */
+.glass {
+  background: rgba(18, 18, 20, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
