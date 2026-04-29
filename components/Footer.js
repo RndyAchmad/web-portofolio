@@ -41,10 +41,6 @@ export default function Footer({ t, socialLinks }) {
                         <p className="text-text-secondary text-sm leading-[1.7] max-w-[380px]">
                             {t.footer.description} <span className="text-white">Laravel</span> ecosystem.
                         </p>
-                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.15em] text-primary/70 bg-primary/5 w-fit px-3 py-1 rounded-full border border-primary/10">
-                            <span className="h-2 w-2 bg-green-500 rounded-full"></span>
-                            v2.0.4
-                        </div>
                     </div>
 
                     {/* Navigation */}
