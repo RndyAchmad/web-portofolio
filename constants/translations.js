@@ -6,7 +6,7 @@ export const translations = {
             greet: "Hello, I'm",
             description: "A Fullstack Web Developer specialized in the Laravel ecosystem. I build end-to-end applications, from robust backend architectures to modern, responsive user interfaces.",
             subDescription: "Proven experience in developing ERP systems and content automation solutions with a focus on clean code and performance.",
-            cta_linkedin: "LinkedIn Profile",
+            cta_cv: "View CV",
             cta_github: "GitHub Portfolio"
         },
         education: {
@@ -41,7 +41,11 @@ export const translations = {
             mantra: "Clean code always looks like it was written by someone who cares.",
             rights: "All rights reserved.",
             techStack: ["Next.js", "Tailwind", "Vercel"]
-        }
+        },
+        connect: {
+            title: "Let's Connect",
+            description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question or just want to say hi, my inbox is always open!"
+        },
     },
     id: {
         nav: { home: "beranda", education: "pendidikan", tech: "teknologi", experience: "pengalaman" },
@@ -50,7 +54,7 @@ export const translations = {
             greet: "Halo, Saya",
             description: "Seorang Fullstack Web Developer yang berspesialisasi dalam ekosistem Laravel. Saya membangun aplikasi end-to-end, dari arsitektur backend yang kokoh hingga antarmuka pengguna yang modern dan responsif.",
             subDescription: "Pengalaman terbukti dalam mengembangkan sistem ERP dan solusi otomatisasi konten dengan fokus pada kode yang bersih dan performa.",
-            cta_linkedin: "Profil LinkedIn",
+            cta_cv: "Lihat CV",
             cta_github: "Portofolio GitHub"
         },
         education: {
@@ -85,6 +89,10 @@ export const translations = {
             mantra: "Kode yang bersih selalu terlihat seperti ditulis oleh seseorang yang peduli.",
             rights: "Hak cipta dilindungi.",
             techStack: ["Next.js", "Tailwind", "Vercel"]
-        }
+        },
+        connect: {
+            title: "Mari Terhubung",
+            description: "Saya selalu terbuka untuk mendiskusikan proyek baru, ide kreatif, atau peluang untuk menjadi bagian dari visi Anda. Jika Anda memiliki pertanyaan atau hanya ingin menyapa, saya siap membantu!"
+        },
     }
 };

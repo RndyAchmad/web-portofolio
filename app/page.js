@@ -10,7 +10,7 @@ import TechAnimation from "@/components/TechAnimation";
 const SOCIAL_LINKS = {
   github: "https://github.com/rndyachmad",
   linkedin: "https://linkedin.com/in/rendyachmad/",
-  email: "mailto:rendyachmad55@gmail.com?subject=Hello&body=Hi%20Rendy,"
+  email: "mailto:rendyachmad55@gmail.com?subject=Collaboration%20Inquiry&body=Hi%20Rendy,%20I%20would%20like%20to%20discuss..."
 };
 
 export default function Home() {
@@ -55,15 +55,14 @@ export default function Home() {
                 <p className="text-text-secondary text-sm border-l-2 border-primary/30 pl-4 italic">{t.hero.subDescription}</p>
               </div>
 
-              {/* Action Buttons with Social Links Sync */}
               <div className="mt-10 flex flex-wrap gap-4 w-full justify-center lg:justify-start">
                 <a
-                  href={SOCIAL_LINKS.linkedin}
+                  href="/dokumen/cv-rendy.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-primary text-black px-6 py-3 rounded-lg font-bold text-sm hover:scale-105 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)]"
                 >
-                  {t.hero.cta_linkedin}
+                  {t.hero.cta_cv}
                 </a>
                 <a
                   href={SOCIAL_LINKS.github}
@@ -103,7 +102,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Programming Languages */}
             <div className="glass p-8 rounded-2xl">
               <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.lang}</h4>
               <div className="flex flex-wrap gap-3">
@@ -113,7 +111,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Frameworks & Libraries */}
             <div className="glass p-8 rounded-2xl">
               <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.frameworks}</h4>
               <div className="flex flex-wrap gap-3">
@@ -123,7 +120,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Database */}
             <div className="glass p-8 rounded-2xl">
               <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.db}</h4>
               <div className="flex flex-wrap gap-3">
@@ -133,7 +129,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Tools */}
             <div className="glass p-8 rounded-2xl">
               <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.tools}</h4>
               <div className="flex flex-wrap gap-3">
@@ -169,9 +164,63 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contact */}
+        <section id="connect" className="scroll-mt-24 mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">{t.connect.title}</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              {t.connect.description}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Email Card */}
+            <a
+              href={SOCIAL_LINKS.email}
+              className="glass group rounded-3xl p-10 flex flex-col items-center justify-center text-center gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-2 shadow-xl"
+            >
+              <div className="text-5xl md:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+                <i className="fas fa-envelope"></i>
+              </div>
+              <div className="space-y-2">
+                <span className="block text-xl font-bold text-white tracking-wide uppercase">Email</span>
+              </div>
+            </a>
+
+            {/* LinkedIn Card */}
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass group rounded-3xl p-10 flex flex-col items-center justify-center text-center gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-2 shadow-xl"
+            >
+              <div className="text-5xl md:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+                <i className="fab fa-linkedin"></i>
+              </div>
+              <div className="space-y-2">
+                <span className="block text-xl font-bold text-white tracking-wide uppercase">LinkedIn</span>
+              </div>
+            </a>
+
+            {/* GitHub Card */}
+            <a
+              href={SOCIAL_LINKS.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass group rounded-3xl p-10 flex flex-col items-center justify-center text-center gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-2 shadow-xl"
+            >
+              <div className="text-5xl md:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+                <i className="fab fa-github"></i>
+              </div>
+              <div className="space-y-2">
+                <span className="block text-xl font-bold text-white tracking-wide uppercase">GitHub</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
       </main>
 
-      {/* Footer dengan props t dan link sosial yang sama */}
       <Footer t={t} socialLinks={SOCIAL_LINKS} />
     </div>
   );
