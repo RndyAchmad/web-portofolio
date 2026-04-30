@@ -101,19 +101,43 @@ export default function Home() {
             <h2 className="text-2xl font-bold">{t.skills.title}</h2>
             <div className="h-[1px] flex-1 bg-white/10"></div>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Programming Languages */}
             <div className="glass p-8 rounded-2xl">
               <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.lang}</h4>
               <div className="flex flex-wrap gap-3">
-                {["PHP", "JavaScript", "SQL", "Java", "Python"].map(item => (
+                {["PHP", "JavaScript", "Java", "Python"].map(item => (
                   <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
                 ))}
               </div>
             </div>
+
+            {/* Frameworks & Libraries */}
             <div className="glass p-8 rounded-2xl">
-              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.stack}</h4>
+              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.frameworks}</h4>
               <div className="flex flex-wrap gap-3">
-                {["Laravel", "Tailwind CSS", "MySQL", "jQuery", "Next.js"].map(item => (
+                {["Laravel", "Livewire", "Next.js", "React", "Tailwind CSS", "Bootstrap", "jQuery", "AJAX", "DataTables", "DOMPDF", "Guzzle"].map(item => (
+                  <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Database */}
+            <div className="glass p-8 rounded-2xl">
+              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.db}</h4>
+              <div className="flex flex-wrap gap-3">
+                {["MySQL"].map(item => (
+                  <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools */}
+            <div className="glass p-8 rounded-2xl">
+              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.tools}</h4>
+              <div className="flex flex-wrap gap-3">
+                {["Git", "GitHub", "Postman", "Laragon", "TablePlus", "Visual Studio Code", "Figma"].map(item => (
                   <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
                 ))}
               </div>

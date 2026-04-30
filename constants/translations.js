@@ -14,7 +14,13 @@ export const translations = {
             degree: "Information Systems Major",
             gpa: "GPA 3.83 / 4.00"
         },
-        skills: { title: "Core Skills", lang: "Programming Languages", stack: "Tech Stack & Frameworks" },
+        skills: {
+            title: "Tech Stack",
+            lang: "Programming Languages",
+            frameworks: "Frameworks & Libraries",
+            db: "Database",
+            tools: "Tools"
+        },
         experience: {
             title: "Professional Experience",
             exp1: [
@@ -52,7 +58,13 @@ export const translations = {
             degree: "Jurusan Sistem Informasi",
             gpa: "IPK 3.83 / 4.00"
         },
-        skills: { title: "Keahlian Utama", lang: "Bahasa Pemrograman", stack: "Teknologi & Framework" },
+        skills: {
+            title: "Infrastruktur Teknologi",
+            lang: "Bahasa Pemrograman",
+            frameworks: "Framework & Library",
+            db: "Database",
+            tools: "Peralatan"
+        },
         experience: {
             title: "Pengalaman Profesional",
             exp1: [

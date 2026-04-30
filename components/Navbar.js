@@ -12,15 +12,17 @@ export default function Navbar({ lang, setLang, t }) {
         <div className="flex justify-between h-16 items-center">
 
           <div>
-            <Link href="/" className="text-xl font-mono font-bold tracking-tight">
-              <span className="text-primary">~/</span>rndyachmad<span className="animate-pulse text-primary">_</span>
+            <Link href="/" className="text-xl font-mono font-bold tracking-tighter group flex items-center ">
+              <span className="text-primary group-hover:mr-1 transition-all">~/</span>
+              <span className="text-white">rndyachmad</span>
+              <span className="animate-pulse text-primary ml-1">_</span>
             </Link>
           </div>
 
           <div className="flex items-center gap-4 md:gap-8">
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8 text-sm font-mono text-text-secondary">
-              <Link href="#home" className="hover:text-primary transition">{t.nav.home}</Link>
+              <Link href="/" className="hover:text-primary transition">{t.nav.home}</Link>
               <Link href="#education" className="hover:text-primary transition">{t.nav.education}</Link>
               <Link href="#tech-stack" className="hover:text-primary transition">{t.nav.tech}</Link>
               <Link href="#experience" className="hover:text-primary transition">{t.nav.experience}</Link>
