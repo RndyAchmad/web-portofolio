@@ -5,6 +5,7 @@ const NAV_LINKS = [
     { name: "education", href: "#education", key: "education" },
     { name: "tech", href: "#tech-stack", key: "tech" },
     { name: "experience", href: "#experience", key: "experience" },
+    { name: "connect", href: "#connect", key: "connect" },
 ];
 
 const FooterSection = ({ title, children }) => (

@@ -1,6 +1,6 @@
 export const translations = {
     en: {
-        nav: { home: "home", education: "education", tech: "tech", experience: "experience" },
+        nav: { home: "home", education: "education", tech: "tech", experience: "experience", connect: "connect" },
         hero: {
             badge: "Ready to build something great? Let's connect!",
             greet: "Hello, I'm",
@@ -51,7 +51,7 @@ export const translations = {
         },
     },
     id: {
-        nav: { home: "beranda", education: "pendidikan", tech: "teknologi", experience: "pengalaman" },
+        nav: { home: "beranda", education: "pendidikan", tech: "teknologi", experience: "pengalaman", connect: "hubungi" },
         hero: {
             badge: "Siap membangun hal hebat? Mari terhubung!",
             greet: "Halo, Saya",

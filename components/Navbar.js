@@ -26,6 +26,7 @@ export default function Navbar({ lang, setLang, t }) {
               <Link href="#education" className="hover:text-orange-500 transition">{t.nav.education}</Link>
               <Link href="#tech-stack" className="hover:text-orange-500 transition">{t.nav.tech}</Link>
               <Link href="#experience" className="hover:text-orange-500 transition">{t.nav.experience}</Link>
+              <Link href="#connect" className="hover:text-orange-500 transition">{t.nav.connect}</Link>
             </div>
 
             <div className="flex items-center gap-2 font-mono text-[10px] border border-white/10 px-2 py-1 rounded-md bg-[#161616]">
@@ -49,6 +50,7 @@ export default function Navbar({ lang, setLang, t }) {
           <Link href="#education" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.education}</Link>
           <Link href="#tech-stack" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.tech}</Link>
           <Link href="#experience" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.experience}</Link>
+          <Link href="#connect" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.connect}</Link>
         </div>
       </div>
     </nav>
