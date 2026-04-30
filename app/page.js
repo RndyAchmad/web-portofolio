@@ -1,12 +1,10 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { translations } from "@/constants/translations";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TechAnimation from "@/components/TechAnimation";
 
-// SINGLE SOURCE OF TRUTH - Link Sosial
 const SOCIAL_LINKS = {
   github: "https://github.com/rndyachmad",
   linkedin: "https://linkedin.com/in/rendyachmad/",
@@ -29,38 +27,51 @@ export default function Home() {
   const t = translations[lang];
 
   return (
-    <div className="bg-bg text-text font-sans selection:bg-primary selection:text-black">
+    <div className="bg-[#0a0a0a] text-white font-sans selection:bg-orange-500 selection:text-black min-h-screen flex flex-col">
       <Navbar lang={lang} setLang={changeLang} t={t} />
 
-      <main className="flex flex-col gap-20 px-6 md:px-12 max-w-7xl mx-auto py-10">
+      <main className="flex-1 flex flex-col gap-16 sm:gap-24 px-5 md:px-10 max-w-7xl mx-auto w-full">
 
         {/* Hero Section */}
-        <section id="home" className="min-h-[60vh] flex flex-col justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium mb-6">
+        <section id="home" className="min-h-[85vh] flex flex-col justify-center scroll-mt-20 py-5">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 lg:gap-8 items-center">
+
+            {/* Kolom Kiri - Teks */}
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:pr-10 order-last lg:order-first">
+
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#0a0a0a] border border-orange-500/30 text-orange-500 text-sm font-medium mb-6 shadow-[0_0_15px_rgba(249,115,22,0.1)]">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex h-2 w-2 bg-primary rounded-full"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 bg-orange-500 rounded-full"></span>
                 </span>
                 {t.hero.badge}
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                {t.hero.greet} <span className="text-primary glow-text">Rendy</span>
+              {/* Judul Utama */}
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-bold tracking-tight mb-6 leading-[1.1] text-white">
+                {t.hero.greet}
+                <span className="text-orange-500 drop-shadow-[0_0_30px_rgba(249,115,22,0.5)]"> Rendy</span>
               </h1>
 
-              <div className="space-y-4 max-w-2xl">
-                <p className="text-lg text-text-secondary leading-relaxed">{t.hero.description}</p>
-                <p className="text-text-secondary text-sm border-l-2 border-primary/30 pl-4 italic">{t.hero.subDescription}</p>
+              {/* Deskripsi */}
+              <div className="space-y-6 max-w-2xl mb-10">
+                <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed font-light">
+                  {t.hero.description}
+                </p>
+
+                <p className="text-sm sm:text-base text-gray-400 border-l-[3px] border-orange-500/70 pl-5 py-1.5 italic font-light">
+                  {t.hero.subDescription}
+                </p>
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-4 w-full justify-center lg:justify-start">
+              {/* Tombol */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <a
                   href="/dokumen/cv-rendy.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-primary text-black px-6 py-3 rounded-lg font-bold text-sm hover:scale-105 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+                  className="bg-orange-500 text-black text-center px-8 py-3.5 rounded-lg font-bold text-base hover:bg-orange-400 transition-all duration-300 shadow-[0_0_20px_rgba(249,115,22,0.35)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] hover:-translate-y-0.5"
                 >
                   {t.hero.cta_cv}
                 </a>
@@ -68,125 +79,143 @@ export default function Home() {
                   href={SOCIAL_LINKS.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass text-white px-6 py-3 rounded-lg text-sm hover:bg-white/10 transition-all"
+                  className="bg-[#101010] border border-white/10 text-white text-center px-8 py-3.5 rounded-lg text-base hover:border-white/30 hover:bg-[#1a1a1a] transition-all duration-300 hover:-translate-y-0.5"
                 >
                   {t.hero.cta_github}
                 </a>
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex justify-center order-first lg:order-last">
+            {/* Kolom Kanan - Animasi */}
+            <div className="flex justify-center lg:justify-end w-full">
               <TechAnimation />
             </div>
+
           </div>
         </section>
 
         {/* Education Section */}
         <section id="education" className="scroll-mt-24">
-          <div className="flex items-center gap-4 mb-8">
-            <h2 className="text-2xl font-bold">{t.education.title}</h2>
-            <div className="h-[1px] flex-1 bg-white/10"></div>
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">{t.education.title}</h2>
+            <div className="w-12 h-1 bg-orange-500 mx-auto rounded-full mb-5"></div>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto leading-relaxed px-4 md:px-0">
+              {t.education.description}
+            </p>
           </div>
-          <div className="glass p-8 rounded-2xl border-l-4 border-primary">
-            <h3 className="text-xl font-bold text-white">UPN "Veteran" Jawa Timur</h3>
-            <p className="text-text-secondary italic">{t.education.degree}</p>
-            <p className="text-lg font-semibold text-primary mt-2">{t.education.gpa}</p>
+          <div className="bg-[#161616] p-5 sm:p-6 rounded-xl border border-white/5 hover:border-orange-500/30 transition-colors max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4 shadow-lg">
+            <div>
+              <h3 className="text-lg font-bold text-white mb-1">UPN "Veteran" Jawa Timur</h3>
+              <p className="text-gray-400 text-sm">{t.education.degree}</p>
+            </div>
+            <div className="bg-[#0a0a0a] px-4 py-2 rounded-lg border border-white/5 shadow-inner">
+              <p className="text-base font-bold text-orange-500 whitespace-nowrap">{t.education.gpa}</p>
+            </div>
           </div>
         </section>
 
         {/* Skills Section */}
         <section id="tech-stack" className="scroll-mt-24">
-          <div className="flex items-center gap-4 mb-8">
-            <h2 className="text-2xl font-bold">{t.skills.title}</h2>
-            <div className="h-[1px] flex-1 bg-white/10"></div>
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">{t.skills.title}</h2>
+            <div className="w-12 h-1 bg-orange-500 mx-auto rounded-full mb-5"></div>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto leading-relaxed px-4 md:px-0">
+              {t.skills.description}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass p-8 rounded-2xl">
-              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.lang}</h4>
-              <div className="flex flex-wrap gap-3">
-                {["PHP", "JavaScript", "Java", "Python"].map(item => (
-                  <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
-                ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {[
+              { title: t.skills.lang, icon: "fas fa-code", items: ["PHP", "JavaScript", "Java", "Python"] },
+              { title: t.skills.frameworks, icon: "fas fa-layer-group", items: ["Laravel", "Livewire", "Next.js", "React", "Tailwind CSS", "Bootstrap", "jQuery", "AJAX", "DataTables", "DOMPDF", "Guzzle"] },
+              { title: t.skills.db, icon: "fas fa-database", items: ["MySQL", "Redis"] },
+              { title: t.skills.tools, icon: "fas fa-tools", items: ["Git", "GitHub", "Postman", "Laragon", "TablePlus", "Visual Studio Code", "Figma"] }
+            ].map((skill, idx) => (
+              <div key={idx} className="bg-[#161616] p-5 rounded-xl border border-white/5 hover:border-orange-500/50 hover:-translate-y-1 transition-all duration-300 group shadow-lg">
+                <div className="text-orange-500 text-2xl mb-4 group-hover:scale-110 group-hover:text-orange-400 transition-transform transform origin-left">
+                  <i className={skill.icon}></i>
+                </div>
+                <h4 className="text-[15px] font-bold text-white mb-3">{skill.title}</h4>
+                <div className="flex flex-wrap gap-2">
+                  {skill.items.map(item => (
+                    <span key={item} className="px-2.5 py-1 bg-[#0a0a0a] border border-white/10 rounded text-[10px] font-medium text-gray-300 uppercase tracking-wider">{item}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div className="glass p-8 rounded-2xl">
-              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.frameworks}</h4>
-              <div className="flex flex-wrap gap-3">
-                {["Laravel", "Livewire", "Next.js", "React", "Tailwind CSS", "Bootstrap", "jQuery", "AJAX", "DataTables", "DOMPDF", "Guzzle"].map(item => (
-                  <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
-                ))}
-              </div>
-            </div>
-
-            <div className="glass p-8 rounded-2xl">
-              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.db}</h4>
-              <div className="flex flex-wrap gap-3">
-                {["MySQL"].map(item => (
-                  <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
-                ))}
-              </div>
-            </div>
-
-            <div className="glass p-8 rounded-2xl">
-              <h4 className="text-sm font-bold text-primary mb-6 uppercase tracking-widest">{t.skills.tools}</h4>
-              <div className="flex flex-wrap gap-3">
-                {["Git", "GitHub", "Postman", "Laragon", "TablePlus", "Visual Studio Code", "Figma"].map(item => (
-                  <span key={item} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm">{item}</span>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
         {/* Experience Section */}
         <section id="experience" className="scroll-mt-24">
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-2xl font-bold">{t.experience.title}</h2>
-            <div className="h-[1px] flex-1 bg-white/10"></div>
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">{t.experience.title}</h2>
+            <div className="w-12 h-1 bg-orange-500 mx-auto rounded-full mb-5"></div>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto leading-relaxed px-4 md:px-0">
+              {t.experience.description}
+            </p>
           </div>
-          <div className="space-y-8">
-            <div className="glass p-8 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-              <h3 className="text-xl font-bold text-white">Fullstack Developer Intern</h3>
-              <p className="text-primary font-medium mb-4">PT. Angsar Inspirasi Digital | Jan - Jun 2026</p>
-              <ul className="text-text-secondary text-sm space-y-3 list-disc list-inside leading-relaxed">
-                {t.experience.exp1.map((li, i) => <li key={i}>{li}</li>)}
-              </ul>
+          <div className="space-y-4 max-w-4xl mx-auto">
+            {/* Experience 1 */}
+            <div className="bg-[#161616] p-5 sm:p-6 rounded-xl border border-white/5 hover:border-orange-500/30 transition-all duration-300 flex flex-col md:flex-row gap-5 shadow-lg">
+              <div className="md:w-1/3 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-5 shrink-0">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1">Fullstack Developer Intern</h3>
+                <p className="text-orange-500 font-medium text-[13px]">PT. Angsar Inspirasi Digital</p>
+                <p className="text-gray-500 text-[11px] mt-2 flex items-center gap-2"><i className="far fa-calendar-alt"></i>Jan - Jun 2026</p>
+              </div>
+              <div className="md:w-2/3">
+                <ul className="text-gray-400 text-[13px] sm:text-sm space-y-3">
+                  {t.experience.exp1.map((li, i) => (
+                    <li key={i} className="flex gap-3 items-start">
+                      <span className="text-orange-500 mt-0.5 text-[10px]"><i className="fas fa-check-circle"></i></span>
+                      <span className="leading-relaxed">{li}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="glass p-8 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-              <h3 className="text-xl font-bold text-white">Backend Developer Intern</h3>
-              <p className="text-primary font-medium mb-4">PT. Ordo Teknologi Karya | Feb - Jun 2025</p>
-              <ul className="text-text-secondary text-sm space-y-3 list-disc list-inside leading-relaxed">
-                {t.experience.exp2.map((li, i) => <li key={i}>{li}</li>)}
-              </ul>
+
+            {/* Experience 2 */}
+            <div className="bg-[#161616] p-5 sm:p-6 rounded-xl border border-white/5 hover:border-orange-500/30 transition-all duration-300 flex flex-col md:flex-row gap-5 shadow-lg">
+              <div className="md:w-1/3 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-5 shrink-0">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1">Backend Developer Intern</h3>
+                <p className="text-orange-500 font-medium text-[13px]">PT. Ordo Teknologi Karya</p>
+                <p className="text-gray-500 text-[11px] mt-2 flex items-center gap-2"><i className="far fa-calendar-alt"></i>Feb - Jun 2025</p>
+              </div>
+              <div className="md:w-2/3">
+                <ul className="text-gray-400 text-[13px] sm:text-sm space-y-3">
+                  {t.experience.exp2.map((li, i) => (
+                    <li key={i} className="flex gap-3 items-start">
+                      <span className="text-orange-500 mt-0.5 text-[10px]"><i className="fas fa-check-circle"></i></span>
+                      <span className="leading-relaxed">{li}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Projects */}
-
-        {/* Contact */}
-        <section id="connect" className="scroll-mt-24 mb-20">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.connect.title}</h2>
-            <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
+        {/* Contact Section */}
+        <section id="connect" className="scroll-mt-24 mb-10">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">{t.connect.title}</h2>
+            <div className="w-12 h-1 bg-orange-500 mx-auto rounded-full mb-5"></div>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto leading-relaxed px-4 md:px-0">
               {t.connect.description}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 max-w-4xl mx-auto">
             {/* Email Card */}
             <a
               href={SOCIAL_LINKS.email}
-              className="glass group rounded-2xl md:rounded-3xl p-5 md:p-10 flex flex-row sm:flex-col items-center justify-center text-center gap-4 md:gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 shadow-xl"
+              className="bg-[#161616] group rounded-xl p-6 flex flex-col items-center justify-center text-center gap-4 border border-white/5 hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
-              <div className="text-3xl md:text-5xl lg:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+              <div className="w-12 h-12 rounded-full bg-[#0a0a0a] border border-white/5 flex items-center justify-center text-lg text-orange-500 group-hover:scale-110 transition-transform">
                 <i className="fas fa-envelope"></i>
               </div>
-              <div className="space-y-2">
-                <span className="block text-base md:text-xl font-bold text-white tracking-wide uppercase">Email</span>
-              </div>
+              <span className="block text-sm font-bold text-white tracking-widest uppercase">Email</span>
             </a>
 
             {/* LinkedIn Card */}
@@ -194,14 +223,12 @@ export default function Home() {
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass group rounded-2xl md:rounded-3xl p-5 md:p-10 flex flex-row sm:flex-col items-center justify-center text-center gap-4 md:gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 shadow-xl"
+              className="bg-[#161616] group rounded-xl p-6 flex flex-col items-center justify-center text-center gap-4 border border-white/5 hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
-              <div className="text-3xl md:text-5xl lg:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
-                <i className="fab fa-linkedin"></i>
+              <div className="w-12 h-12 rounded-full bg-[#0a0a0a] border border-white/5 flex items-center justify-center text-lg text-orange-500 group-hover:scale-110 transition-transform">
+                <i className="fab fa-linkedin-in"></i>
               </div>
-              <div className="space-y-2">
-                <span className="block text-base md:text-xl font-bold text-white tracking-wide uppercase">LinkedIn</span>
-              </div>
+              <span className="block text-sm font-bold text-white tracking-widest uppercase">LinkedIn</span>
             </a>
 
             {/* GitHub Card */}
@@ -209,14 +236,12 @@ export default function Home() {
               href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass group rounded-2xl md:rounded-3xl p-5 md:p-10 flex flex-row sm:flex-col items-center justify-center text-center gap-4 md:gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 shadow-xl"
+              className="bg-[#161616] group rounded-xl p-6 flex flex-col items-center justify-center text-center gap-4 border border-white/5 hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
-              <div className="text-3xl md:text-5xl lg:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+              <div className="w-12 h-12 rounded-full bg-[#0a0a0a] border border-white/5 flex items-center justify-center text-lg text-orange-500 group-hover:scale-110 transition-transform">
                 <i className="fab fa-github"></i>
               </div>
-              <div className="space-y-2">
-                <span className="block text-base md:text-xl font-bold text-white tracking-wide uppercase">GitHub</span>
-              </div>
+              <span className="block text-sm font-bold text-white tracking-widest uppercase">GitHub</span>
             </a>
           </div>
         </section>

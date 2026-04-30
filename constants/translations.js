@@ -11,11 +11,13 @@ export const translations = {
         },
         education: {
             title: "Education",
+            description: "My academic journey that shaped my logical thinking and technical foundation.",
             degree: "Information Systems Major",
             gpa: "GPA 3.83 / 4.00"
         },
         skills: {
             title: "Tech Stack",
+            description: "The tools and technologies I use to bring digital ideas to life.",
             lang: "Programming Languages",
             frameworks: "Frameworks & Libraries",
             db: "Database",
@@ -23,6 +25,7 @@ export const translations = {
         },
         experience: {
             title: "Professional Experience",
+            description: "A timeline of my professional growth and the impact I've made in various roles.",
             exp1: [
                 "Developing end-to-end content automation systems using Laravel and PHP.",
                 "Designing modern, responsive UIs with Tailwind CSS and Blade Templating.",
@@ -59,11 +62,13 @@ export const translations = {
         },
         education: {
             title: "Pendidikan",
+            description: "Perjalanan akademik yang membentuk pola pikir logis dan fondasi teknis saya.",
             degree: "Jurusan Sistem Informasi",
             gpa: "IPK 3.83 / 4.00"
         },
         skills: {
             title: "Infrastruktur Teknologi",
+            description: "Berbagai alat dan teknologi yang saya gunakan untuk mewujudkan ide digital.",
             lang: "Bahasa Pemrograman",
             frameworks: "Framework & Library",
             db: "Database",
@@ -71,6 +76,7 @@ export const translations = {
         },
         experience: {
             title: "Pengalaman Profesional",
+            description: "Rekam jejak pertumbuhan profesional dan dampak yang saya berikan dalam berbagai peran.",
             exp1: [
                 "Mengembangkan sistem otomatisasi konten end-to-end menggunakan Laravel dan PHP.",
                 "Mendesain UI modern dan responsif dengan Tailwind CSS dan Blade Templating.",

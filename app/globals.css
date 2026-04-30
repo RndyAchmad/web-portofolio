@@ -1,20 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
-  --foreground: #fafafa;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
 }
 
 @theme {
-  /* Warna yang sudah kita buat sebelumnya */
-  --color-bg: #09090b;
-  --color-surface: #121214;
-  --color-primary: #06b6d4;
-  --color-primary-hover: #0891b2;
-  --color-text-secondary: #a1a1aa;
-  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-bg: #0a0a0a;
+  --color-surface: #161616;
+  --color-primary: #f97316;
+  /* Orange 500 */
+  --color-text-secondary: #9ca3af;
+  /* Gray 400 */
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
 
-  /* --- TAMBAHKAN ANIMASI DI SINI --- */
   --animate-spin-slow: spin 20s linear infinite;
   --animate-spin-reverse-slow: spin-reverse 15s linear infinite;
 
@@ -29,18 +28,31 @@
   }
 }
 
-/* Utilitas tambahan */
-.glass {
-  background: rgba(18, 18, 20, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border-subtle);
-}
-
-.glow-text {
-  text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+  /* Glow Oranye */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }
