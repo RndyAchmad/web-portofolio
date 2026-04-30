@@ -103,14 +103,31 @@ export default function Home() {
               {t.education.description}
             </p>
           </div>
+
           <div className="bg-[#161616] p-5 sm:p-6 rounded-xl border border-white/5 hover:border-orange-500/30 transition-colors max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4 shadow-lg">
-            <div>
-              <h3 className="text-lg font-bold text-white mb-1">UPN "Veteran" Jawa Timur</h3>
-              <p className="text-gray-400 text-sm">{t.education.degree}</p>
+
+            <div className="flex flex-col sm:flex-row items-center gap-5">
+              {/* Logo */}
+              <div className="w-16 h-16 flex-shrink-0">
+                <img
+                  src="/images/logo-upn.png"
+                  alt="UPN Veteran Jawa Timur"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              {/* Teks */}
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">UPN "Veteran" Jawa Timur</h3>
+                <p className="text-gray-400 text-sm">{t.education.degree}</p>
+              </div>
             </div>
+
+            {/* Badge IPK */}
             <div className="bg-[#0a0a0a] px-4 py-2 rounded-lg border border-white/5 shadow-inner">
               <p className="text-base font-bold text-orange-500 whitespace-nowrap">{t.education.gpa}</p>
             </div>
+
           </div>
         </section>
 
@@ -148,51 +165,88 @@ export default function Home() {
 
         {/* Experience Section */}
         <section id="experience" className="scroll-mt-24">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2">{t.experience.title}</h2>
-            <div className="w-12 h-1 bg-orange-500 mx-auto rounded-full mb-5"></div>
-            <p className="text-gray-400 text-sm max-w-xl mx-auto leading-relaxed px-4 md:px-0">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">
+              {t.experience.title}
+            </h2>
+            <div className="w-12 h-1 bg-orange-500 mx-auto rounded-full mb-4"></div>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto leading-snug px-4 md:px-0">
               {t.experience.description}
             </p>
           </div>
-          <div className="space-y-4 max-w-4xl mx-auto">
-            {/* Experience 1 */}
-            <div className="bg-[#161616] p-5 sm:p-6 rounded-xl border border-white/5 hover:border-orange-500/30 transition-all duration-300 flex flex-col md:flex-row gap-5 shadow-lg">
-              <div className="md:w-1/3 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-5 shrink-0">
-                <h3 className="text-base sm:text-lg font-bold text-white mb-1">Fullstack Developer Intern</h3>
-                <p className="text-orange-500 font-medium text-[13px]">PT. Angsar Inspirasi Digital</p>
-                <p className="text-gray-500 text-[11px] mt-2 flex items-center gap-2"><i className="far fa-calendar-alt"></i>Jan - Jun 2026</p>
-              </div>
-              <div className="md:w-2/3">
-                <ul className="text-gray-400 text-[13px] sm:text-sm space-y-3">
-                  {t.experience.exp1.map((li, i) => (
-                    <li key={i} className="flex gap-3 items-start">
-                      <span className="text-orange-500 mt-0.5 text-[10px]"><i className="fas fa-check-circle"></i></span>
-                      <span className="leading-relaxed">{li}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
 
-            {/* Experience 2 */}
-            <div className="bg-[#161616] p-5 sm:p-6 rounded-xl border border-white/5 hover:border-orange-500/30 transition-all duration-300 flex flex-col md:flex-row gap-5 shadow-lg">
-              <div className="md:w-1/3 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-5 shrink-0">
-                <h3 className="text-base sm:text-lg font-bold text-white mb-1">Backend Developer Intern</h3>
-                <p className="text-orange-500 font-medium text-[13px]">PT. Ordo Teknologi Karya</p>
-                <p className="text-gray-500 text-[11px] mt-2 flex items-center gap-2"><i className="far fa-calendar-alt"></i>Feb - Jun 2025</p>
+          <div className="space-y-5 sm:space-y-6 max-w-5xl mx-auto px-4 md:px-0">
+
+            {/* CARD */}
+            {[{
+              role: "Fullstack Developer",
+              company: "PT. Angsar Inspirasi Digital",
+              date: "Jan - Jun 2026",
+              logo: "/images/logo-pt-angsar.png",
+              data: t.experience.exp1
+            }, {
+              role: "Backend Developer",
+              company: "PT. Ordo Teknologi Karya",
+              date: "Feb - Jun 2025",
+              logo: "/images/logo-ordo.png",
+              data: t.experience.exp2
+            }].map((exp, idx) => (
+
+              <div key={idx} className="bg-[#161616] p-5 sm:p-6 rounded-2xl border border-white/5 hover:border-orange-500/30 transition-all duration-300 shadow-xl">
+
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+
+                  {/* LEFT */}
+                  <div className="lg:w-[35%] flex items-start gap-4 sm:gap-5 shrink-0">
+
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-xl p-2.5 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+                      <img
+                        src={exp.logo}
+                        alt="logo"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+
+                    <div className="flex flex-col pt-1">
+                      <h3 className="text-base sm:text-lg font-bold text-white leading-tight mb-1">
+                        {exp.role}
+                      </h3>
+
+                      <p className="text-orange-500 font-semibold text-xs sm:text-sm mb-2">
+                        {exp.company}
+                      </p>
+
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0a0a0a] border border-white/5 text-gray-500 text-[10px] sm:text-[11px] w-fit">
+                        <i className="far fa-calendar-alt text-orange-500"></i>
+                        {exp.date}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* RIGHT */}
+                  <div className="lg:w-[65%] lg:border-l border-white/10 lg:pl-6 flex items-start">
+                    <ul className="space-y-2.5 sm:space-y-3">
+                      {exp.data.map((li, i) => (
+                        <li key={i} className="flex gap-3 items-start text-gray-400 group/item">
+
+                          <span className="text-orange-500/80 mt-[6px] text-[8px] shrink-0">
+                            <i className="fas fa-circle"></i>
+                          </span>
+
+                          <span className="text-[13px] sm:text-sm leading-snug group-hover/item:text-gray-200 transition-colors">
+                            {li}
+                          </span>
+
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
               </div>
-              <div className="md:w-2/3">
-                <ul className="text-gray-400 text-[13px] sm:text-sm space-y-3">
-                  {t.experience.exp2.map((li, i) => (
-                    <li key={i} className="flex gap-3 items-start">
-                      <span className="text-orange-500 mt-0.5 text-[10px]"><i className="fas fa-check-circle"></i></span>
-                      <span className="leading-relaxed">{li}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+
+            ))}
+
           </div>
         </section>
 

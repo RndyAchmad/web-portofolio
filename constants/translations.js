@@ -34,7 +34,7 @@ export const translations = {
             exp2: [
                 "Engineered RESTful APIs for complex ERP systems using Laravel.",
                 "Implemented Role Based Access Control and automated SMTP services.",
-                "Refactored SQL queries and utilized Redis Cache for performance."
+                "Collaborated with frontend teams for seamless system integration."
             ]
         },
         footer: {
@@ -85,7 +85,7 @@ export const translations = {
             exp2: [
                 "Membangun RESTful API untuk sistem ERP kompleks menggunakan Laravel.",
                 "Mengimplementasikan Role Based Access Control dan layanan email SMTP otomatis.",
-                "Melakukan refactor query SQL dan penggunaan Redis Cache untuk performa."
+                "Berkolaborasi dengan tim frontend untuk integrasi sistem."
             ]
         },
         footer: {
