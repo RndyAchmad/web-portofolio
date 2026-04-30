@@ -164,26 +164,28 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Projects */}
+
         {/* Contact */}
         <section id="connect" className="scroll-mt-24 mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">{t.connect.title}</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.connect.title}</h2>
+            <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
               {t.connect.description}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto">
             {/* Email Card */}
             <a
               href={SOCIAL_LINKS.email}
-              className="glass group rounded-3xl p-10 flex flex-col items-center justify-center text-center gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-2 shadow-xl"
+              className="glass group rounded-2xl md:rounded-3xl p-5 md:p-10 flex flex-row sm:flex-col items-center justify-center text-center gap-4 md:gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 shadow-xl"
             >
-              <div className="text-5xl md:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+              <div className="text-3xl md:text-5xl lg:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
                 <i className="fas fa-envelope"></i>
               </div>
               <div className="space-y-2">
-                <span className="block text-xl font-bold text-white tracking-wide uppercase">Email</span>
+                <span className="block text-base md:text-xl font-bold text-white tracking-wide uppercase">Email</span>
               </div>
             </a>
 
@@ -192,13 +194,13 @@ export default function Home() {
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass group rounded-3xl p-10 flex flex-col items-center justify-center text-center gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-2 shadow-xl"
+              className="glass group rounded-2xl md:rounded-3xl p-5 md:p-10 flex flex-row sm:flex-col items-center justify-center text-center gap-4 md:gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 shadow-xl"
             >
-              <div className="text-5xl md:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+              <div className="text-3xl md:text-5xl lg:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
                 <i className="fab fa-linkedin"></i>
               </div>
               <div className="space-y-2">
-                <span className="block text-xl font-bold text-white tracking-wide uppercase">LinkedIn</span>
+                <span className="block text-base md:text-xl font-bold text-white tracking-wide uppercase">LinkedIn</span>
               </div>
             </a>
 
@@ -207,13 +209,13 @@ export default function Home() {
               href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass group rounded-3xl p-10 flex flex-col items-center justify-center text-center gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-2 shadow-xl"
+              className="glass group rounded-2xl md:rounded-3xl p-5 md:p-10 flex flex-row sm:flex-col items-center justify-center text-center gap-4 md:gap-6 border border-white/5 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 shadow-xl"
             >
-              <div className="text-5xl md:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
+              <div className="text-3xl md:text-5xl lg:text-6xl text-primary transition-transform duration-300 group-hover:scale-110">
                 <i className="fab fa-github"></i>
               </div>
               <div className="space-y-2">
-                <span className="block text-xl font-bold text-white tracking-wide uppercase">GitHub</span>
+                <span className="block text-base md:text-xl font-bold text-white tracking-wide uppercase">GitHub</span>
               </div>
             </a>
           </div>
