@@ -148,16 +148,30 @@ export default function Home() {
               { title: t.skills.db, icon: "fas fa-database", items: ["MySQL", "Redis"] },
               { title: t.skills.tools, icon: "fas fa-tools", items: ["Git", "GitHub", "Postman", "Laragon", "TablePlus", "Visual Studio Code", "Figma"] }
             ].map((skill, idx) => (
-              <div key={idx} className="bg-[#161616] p-5 rounded-xl border border-white/5 hover:border-orange-500/50 hover:-translate-y-1 transition-all duration-300 group shadow-lg">
-                <div className="text-orange-500 text-2xl mb-4 group-hover:scale-110 group-hover:text-orange-400 transition-transform transform origin-left">
+              <div className="bg-[#161616] p-5 sm:p-6 rounded-xl border border-white/5 hover:border-orange-500/40 hover:-translate-y-1 transition-all duration-300 group shadow-lg text-center">
+
+                {/* Icon */}
+                <div className="text-orange-500 text-2xl mb-3 group-hover:scale-110 transition-transform">
                   <i className={skill.icon}></i>
                 </div>
-                <h4 className="text-[15px] font-bold text-white mb-3">{skill.title}</h4>
-                <div className="flex flex-wrap gap-2">
+
+                {/* Title */}
+                <h4 className="text-sm sm:text-[15px] font-semibold text-white mb-3">
+                  {skill.title}
+                </h4>
+
+                {/* Tags */}
+                <div className="flex flex-wrap justify-center gap-2">
                   {skill.items.map(item => (
-                    <span key={item} className="px-2.5 py-1 bg-[#0a0a0a] border border-white/10 rounded text-[10px] font-medium text-gray-300 uppercase tracking-wider">{item}</span>
+                    <span
+                      key={item}
+                      className="px-2.5 py-1 bg-[#0a0a0a] border border-white/10 rounded text-[10px] font-medium text-gray-300 uppercase tracking-wide"
+                    >
+                      {item}
+                    </span>
                   ))}
                 </div>
+
               </div>
             ))}
           </div>
@@ -175,7 +189,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-5 sm:space-y-6 max-w-5xl mx-auto px-4 md:px-0">
+          <div className="space-y-5 sm:space-y-6 max-w-5xl mx-auto">
 
             {/* CARD */}
             {[{

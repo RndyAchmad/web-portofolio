@@ -2,7 +2,7 @@
 
 const TechAnimation = () => {
   return (
-    <div className="relative w-full max-w-[240px] sm:max-w-[280px] aspect-square flex items-center justify-center group mx-auto">
+    <div className="relative w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[280px] aspect-square flex items-center justify-center group mx-auto">
       <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-3xl scale-75 group-hover:scale-100 transition-transform duration-1000"></div>
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="relative z-10 w-full h-full opacity-90">
         <circle cx="100" cy="100" r="70" stroke="#f97316" strokeWidth="0.5" fill="none" strokeDasharray="10 40 100 10" className="animate-spin-slow origin-center" style={{ animationDuration: '15s' }} />
