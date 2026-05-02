@@ -1,7 +1,5 @@
 import { Figtree, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Footer from "@/components/Footer";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -12,7 +10,7 @@ const figtree = Figtree({
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-mono", // Font khusus coding/IT
+  variable: "--font-mono",
 });
 
 export const metadata = {

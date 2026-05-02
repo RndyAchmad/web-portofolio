@@ -1,56 +1,105 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
 
+const NAV_ITEMS = [
+  { href: "#home", key: "home" },
+  { href: "#education", key: "education" },
+  { href: "#tech-stack", key: "tech" },
+  { href: "#experience", key: "experience" },
+  { href: "#connect", key: "connect" },
+];
+
 export default function Navbar({ lang, setLang, t }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="border-b border-white/10 sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md text-white">
-      {/* max-w-7xl untuk wadah yang lebih lebar */}
-      <div className="max-w-7xl mx-auto px-5 md:px-10">
-        <div className="flex justify-between h-16 items-center">
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md text-white">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-10">
+        <Link
+          href="/"
+          className="group flex items-center font-mono text-lg font-bold tracking-tighter"
+        >
+          <span className="text-orange-500 transition-all group-hover:mr-1">~/</span>
+          <span className="text-white">rndyachmad</span>
+          <span className="ml-1 animate-pulse text-orange-500">_</span>
+        </Link>
 
-          <div>
-            <Link href="/" className="text-lg font-mono font-bold tracking-tighter group flex items-center">
-              <span className="text-orange-500 group-hover:mr-1 transition-all">~/</span>
-              <span className="text-white">rndyachmad</span>
-              <span className="animate-pulse text-orange-500 ml-1">_</span>
-            </Link>
+        <div className="flex items-center gap-4 md:gap-8">
+          <div className="hidden items-center gap-6 font-mono text-sm text-gray-400 md:flex">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.key}
+                href={item.href}
+                className="transition hover:text-orange-500"
+              >
+                {t.nav[item.key]}
+              </Link>
+            ))}
           </div>
 
-          <div className="flex items-center gap-4 md:gap-8">
-            <div className="hidden md:flex items-center gap-6 text-sm font-mono text-gray-400">
-              <Link href="#home" className="hover:text-orange-500 transition">{t.nav.home}</Link>
-              <Link href="#education" className="hover:text-orange-500 transition">{t.nav.education}</Link>
-              <Link href="#tech-stack" className="hover:text-orange-500 transition">{t.nav.tech}</Link>
-              <Link href="#experience" className="hover:text-orange-500 transition">{t.nav.experience}</Link>
-              <Link href="#connect" className="hover:text-orange-500 transition">{t.nav.connect}</Link>
-            </div>
-
-            <div className="flex items-center gap-2 font-mono text-[10px] border border-white/10 px-2 py-1 rounded-md bg-[#161616]">
-              <button onClick={() => setLang('en')} className={`${lang === 'en' ? 'text-orange-500 font-bold' : 'text-gray-500'} hover:text-orange-500 transition px-1`}>EN</button>
-              <span className="opacity-20 text-white">|</span>
-              <button onClick={() => setLang('id')} className={`${lang === 'id' ? 'text-orange-500 font-bold' : 'text-gray-500'} hover:text-orange-500 transition px-1`}>ID</button>
-            </div>
-
-            <button className="md:hidden flex flex-col gap-1.5 p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Menu">
-              <span className={`h-0.5 w-5 bg-orange-500 transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-              <span className={`h-0.5 w-5 bg-orange-500 transition-all ${menuOpen ? "opacity-0" : ""}`}></span>
-              <span className={`h-0.5 w-5 bg-orange-500 transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+          <div className="flex items-center gap-2 rounded-md border border-white/10 bg-surface px-2 py-1 font-mono text-[10px]">
+            <button
+              onClick={() => setLang("en")}
+              className={`px-1 transition hover:text-orange-500 ${lang === "en"
+                  ? "font-bold text-orange-500"
+                  : "text-gray-500"
+                }`}
+            >
+              EN
+            </button>
+            <span className="text-white opacity-20">|</span>
+            <button
+              onClick={() => setLang("id")}
+              className={`px-1 transition hover:text-orange-500 ${lang === "id"
+                  ? "font-bold text-orange-500"
+                  : "text-gray-500"
+                }`}
+            >
+              ID
             </button>
           </div>
+
+          <button
+            className="flex flex-col gap-1.5 p-2 md:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            <span
+              className={`h-0.5 w-5 bg-orange-500 transition-all ${menuOpen ? "translate-y-2 rotate-45" : ""
+                }`}
+            />
+            <span
+              className={`h-0.5 w-5 bg-orange-500 transition-all ${menuOpen ? "opacity-0" : ""
+                }`}
+            />
+            <span
+              className={`h-0.5 w-5 bg-orange-500 transition-all ${menuOpen ? "-translate-y-2 -rotate-45" : ""
+                }`}
+            />
+          </button>
         </div>
       </div>
 
-      <div className={`md:hidden absolute w-full bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-64 py-3" : "max-h-0 py-0 border-transparent"}`}>
-        <div className="flex flex-col px-5 space-y-3 font-mono text-sm">
-          <Link href="#home" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.home}</Link>
-          <Link href="#education" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.education}</Link>
-          <Link href="#tech-stack" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.tech}</Link>
-          <Link href="#experience" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.experience}</Link>
-          <Link href="#connect" onClick={closeMenu} className="block text-gray-400 hover:text-orange-500 hover:pl-2 transition-all">&gt; {t.nav.connect}</Link>
+      <div
+        className={`absolute w-full overflow-hidden border-b border-white/10 bg-bg/95 backdrop-blur-xl transition-all duration-300 md:hidden ${menuOpen ? "max-h-64 py-3" : "max-h-0 border-transparent py-0"
+          }`}
+      >
+        <div className="flex flex-col space-y-3 px-5 font-mono text-sm">
+          {NAV_ITEMS.map((item) => (
+            <Link
+              key={item.key}
+              href={item.href}
+              onClick={closeMenu}
+              className="block text-gray-400 transition-all hover:pl-2 hover:text-orange-500"
+            >
+              {`> ${t.nav[item.key]}`}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
