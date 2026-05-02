@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import TechAnimation from "@/components/TechAnimation";
 import { translations } from "@/constants/translations";
 import { PROJECTS } from "@/constants/projects";
+import { EXPERIENCES } from "@/constants/experiences";
 import { SKILLS } from "@/constants/skills";
 
 const SOCIAL_LINKS = {
@@ -29,23 +30,6 @@ export default function Home() {
   };
 
   const t = translations[lang];
-
-  const experiences = [
-    {
-      role: "Fullstack Developer",
-      company: "PT. Angsar Inspirasi Digital",
-      date: "Jan - Jun 2026",
-      logo: "/images/logo-pt-angsar.png",
-      data: t.experience.exp1,
-    },
-    {
-      role: "Backend Developer",
-      company: "PT. Ordo Teknologi Karya",
-      date: "Feb - Jun 2025",
-      logo: "/images/logo-ordo.png",
-      data: t.experience.exp2,
-    },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-bg text-white font-sans selection:bg-orange-500 selection:text-black">
@@ -187,6 +171,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+
             ))}
           </div>
         </section>
@@ -204,57 +189,61 @@ export default function Home() {
           </div>
 
           <div className="mx-auto max-w-5xl space-y-5 sm:space-y-6">
-            {experiences.map((exp) => (
-              <div
-                key={`${exp.company}-${exp.role}`}
-                className="rounded-2xl border border-white/5 bg-surface p-5 shadow-xl transition-all duration-300 hover:border-orange-500/30 sm:p-6"
-              >
-                <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
-                  <div className="flex shrink-0 items-start gap-4 sm:gap-5 lg:w-[35%]">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2.5 shadow-[0_0_20px_rgba(255,255,255,0.05)] sm:h-20 sm:w-20">
-                      <img
-                        src={exp.logo}
-                        alt={`${exp.company} logo`}
-                        className="h-full w-full object-contain"
-                      />
-                    </div>
+            {EXPERIENCES.map((exp) => {
+              const expData = t.experience[exp.translationKey];
 
-                    <div className="flex flex-col pt-1">
-                      <h3 className="mb-1 text-base font-bold leading-tight text-white sm:text-lg">
-                        {exp.role}
-                      </h3>
+              return (
+                <div
+                  key={`${exp.company}-${exp.role}`}
+                  className="rounded-2xl border border-white/5 bg-surface p-5 shadow-xl transition-all duration-300 hover:border-orange-500/30 sm:p-6"
+                >
+                  <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
+                    <div className="flex shrink-0 items-start gap-4 sm:gap-5 lg:w-[35%]">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2.5 shadow-[0_0_20px_rgba(255,255,255,0.05)] sm:h-20 sm:w-20">
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
 
-                      <p className="mb-2 text-xs font-semibold text-orange-500 sm:text-sm">
-                        {exp.company}
-                      </p>
+                      <div className="flex flex-col pt-1">
+                        <h3 className="mb-1 text-base font-bold leading-tight text-white sm:text-lg">
+                          {exp.role}
+                        </h3>
 
-                      <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/5 bg-bg px-3 py-1 text-[10px] text-gray-500 sm:text-[11px]">
-                        <i className="far fa-calendar-alt text-orange-500"></i>
-                        {exp.date}
+                        <p className="mb-2 text-xs font-semibold text-orange-500 sm:text-sm">
+                          {exp.company}
+                        </p>
+
+                        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/5 bg-bg px-3 py-1 text-[10px] text-gray-500 sm:text-[11px]">
+                          <i className="far fa-calendar-alt text-orange-500"></i>
+                          {exp.date}
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-start lg:w-[65%] lg:border-l lg:border-white/10 lg:pl-6">
-                    <ul className="space-y-2.5 sm:space-y-3">
-                      {exp.data.map((item, index) => (
-                        <li
-                          key={index}
-                          className="group/item flex items-start gap-3 text-gray-400"
-                        >
-                          <span className="mt-1.5 shrink-0 text-[8px] text-orange-500/80">
-                            <i className="fas fa-circle"></i>
-                          </span>
-                          <span className="text-[13px] leading-snug transition-colors group-hover/item:text-gray-200 sm:text-sm">
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="flex items-start lg:w-[65%] lg:border-l lg:border-white/10 lg:pl-6">
+                      <ul className="space-y-2.5 sm:space-y-3">
+                        {expData.map((item, index) => (
+                          <li
+                            key={index}
+                            className="group/item flex items-start gap-3 text-gray-400"
+                          >
+                            <span className="mt-1.5 shrink-0 text-[8px] text-orange-500/80">
+                              <i className="fas fa-circle"></i>
+                            </span>
+                            <span className="text-[13px] leading-snug transition-colors group-hover/item:text-gray-200 sm:text-sm">
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
