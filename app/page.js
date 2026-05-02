@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { translations } from "@/constants/translations";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TechAnimation from "@/components/TechAnimation";
+import { translations } from "@/constants/translations";
+import { PROJECTS } from "@/constants/projects";
 
 const SOCIAL_LINKS = {
   github: "https://github.com/rndyachmad",
@@ -296,6 +297,65 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="scroll-mt-24">
+          <div className="mb-10 text-center sm:mb-12">
+            <h2 className="mb-2 text-2xl font-bold sm:text-3xl">{t.projects.title}</h2>
+            <div className="mx-auto mb-4 h-1 w-12 rounded-full bg-orange-500"></div>
+            <p className="mx-auto max-w-xl px-4 text-sm leading-relaxed text-gray-400 md:px-0">
+              {t.projects.description}
+            </p>
+          </div>
+
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2">
+            {PROJECTS.map((project) => {
+              const projectData = t.projects.items[project.translationKey];
+
+              return (
+                <article
+                  key={project.title}
+                  className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-surface shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-orange-500/40 hover:shadow-orange-500/10"
+                >
+                  <div className="relative h-64 w-full overflow-hidden sm:h-72 md:h-80">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent"></div>
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-6 sm:p-8">
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-white sm:text-3xl">
+                        {project.title}
+                      </h3>
+                      <p className="mt-2 text-sm font-medium text-orange-500">
+                        {projectData.type}
+                      </p>
+                    </div>
+
+                    <p className="mb-6 text-sm leading-relaxed text-gray-400 sm:text-base">
+                      {projectData.description}
+                    </p>
+
+                    <div className="mt-auto flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-lg border border-white/10 bg-bg/80 px-3 py-1.5 text-xs font-medium text-gray-300 transition-colors duration-300 hover:border-orange-500/30 hover:text-white"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
 

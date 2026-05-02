@@ -45,6 +45,33 @@ export const translations = {
             rights: "All rights reserved.",
             techStack: ["Next.js", "Tailwind", "Vercel"]
         },
+        projects: {
+            title: "Projects",
+            description: "A showcase of my work and contributions in the tech world.",
+            viewProject: "View Details",
+            items: {
+                fuomo: {
+                    type: "Creator Monetization Platform",
+                    description: "A digital platform that empowers creators to share and monetize exclusive content, including photos, audio, illustrations, and direct supporter interactions.",
+                },
+                ets: {
+                    type: "Enterprise Internal Dashboard",
+                    description: "An internal company platform for PT. Ordo Teknologi Karya featuring dashboards and data visualization to support operational workflows.",
+                },
+                xymart: {
+                    type: "Enterprise Internal Dashboard",
+                    description: "Xymart is an internal application developed for a client, available in both web and mobile versions. It serves as a centralized control hub, providing operational data through interactive dashboards that enable real-time activity monitoring and support data-driven decision-making.",
+                },
+                proton: {
+                    type: "Enterprise Internal Dashboard",
+                    description: "Proton is an internal application developed for a client, available in both web and mobile versions. It is designed to display and monitor the company's operational data through an integrated dashboard, enabling real-time data tracking and supporting data-driven decision-making.",
+                },
+                dwo: {
+                    type: "Data Analytics Dashboard",
+                    description: "An interactive DWO dashboard application developed using Laravel, Livewire, and the Volt Laravel Admin Template to visualize insights from the AdventureWorks Data Warehouse model. This project was created as a final semester assignment for the Data Warehouse and OLAP course, with a focus on presenting data interactively to support multidimensional analysis and data-driven decision-making.",
+                },
+            }
+        },
         connect: {
             title: "Let's Connect",
             description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question or just want to say hi, my inbox is always open!"
@@ -95,6 +122,33 @@ export const translations = {
             mantra: "Kode yang bersih selalu terlihat seperti ditulis oleh seseorang yang peduli.",
             rights: "Hak cipta dilindungi.",
             techStack: ["Next.js", "Tailwind", "Vercel"]
+        },
+        projects: {
+            title: "Proyek",
+            description: "Kumpulan proyek dan kontribusi yang telah saya kerjakan di dunia teknologi.",
+            viewProject: "Lihat Detail",
+            items: {
+                fuomo: {
+                    type: "Platform Monetisasi Kreator",
+                    description: "Platform digital yang membantu kreator membagikan dan memonetisasi konten eksklusif mereka, seperti foto, audio, ilustrasi, serta interaksi langsung dengan pendukung.",
+                },
+                ets: {
+                    type: "Dashboard Internal Perusahaan",
+                    description: "Platform internal perusahaan PT. Ordo Teknologi Karya yang menyediakan dashboard dan visualisasi data untuk mendukung operasional bisnis.",
+                },
+                xymart: {
+                    type: "Dashboard Internal Perusahaan",
+                    description: "Xymart adalah aplikasi internal yang dikembangkan untuk klien, tersedia dalam versi web dan mobile. Aplikasi ini berfungsi sebagai pusat kendali terpusat, menyediakan data operasional melalui dashboard interaktif yang memungkinkan pemantauan aktivitas secara real-time dan mendukung pengambilan keputusan berbasis data.",
+                },
+                proton: {
+                    type: "Dashboard Internal Perusahaan",
+                    description: "Proton adalah aplikasi internal yang dikembangkan untuk klien, tersedia dalam versi web dan mobile. Aplikasi ini dirancang untuk menampilkan dan memantau data operasional perusahaan melalui dashboard terintegrasi, memungkinkan pelacakan data secara real-time dan mendukung pengambilan keputusan berbasis data.",
+                },
+                dwo: {
+                    type: "Dashboard Analitik Data",
+                    description: "Aplikasi dashboard DWO interaktif yang dikembangkan menggunakan Laravel, Livewire, dan Volt Laravel Admin Template untuk memvisualisasikan wawasan dari model Data Warehouse AdventureWorks. Proyek ini dibuat sebagai tugas akhir semester untuk mata kuliah Data Warehouse dan OLAP, dengan fokus pada penyajian data secara interaktif untuk mendukung analisis multidimensi dan pengambilan keputusan berbasis data.",
+                },
+            }
         },
         connect: {
             title: "Mari Terhubung",
