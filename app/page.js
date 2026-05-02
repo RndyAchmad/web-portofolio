@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import TechAnimation from "@/components/TechAnimation";
 import { translations } from "@/constants/translations";
 import { PROJECTS } from "@/constants/projects";
+import { SKILLS } from "@/constants/skills";
 
 const SOCIAL_LINKS = {
   github: "https://github.com/rndyachmad",
@@ -13,49 +14,6 @@ const SOCIAL_LINKS = {
   email:
     "mailto:rendyachmad55@gmail.com?subject=Collaboration%20Inquiry&body=Hi%20Rendy,%20I%20would%20like%20to%20discuss...",
 };
-
-const SKILLS = [
-  {
-    key: "lang",
-    icon: "fas fa-code",
-    items: ["PHP", "JavaScript", "Java", "Python"],
-  },
-  {
-    key: "frameworks",
-    icon: "fas fa-layer-group",
-    items: [
-      "Laravel",
-      "Livewire",
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "Bootstrap",
-      "jQuery",
-      "AJAX",
-      "DataTables",
-      "DOMPDF",
-      "Guzzle",
-    ],
-  },
-  {
-    key: "db",
-    icon: "fas fa-database",
-    items: ["MySQL", "Redis"],
-  },
-  {
-    key: "tools",
-    icon: "fas fa-tools",
-    items: [
-      "Git",
-      "GitHub",
-      "Postman",
-      "Laragon",
-      "TablePlus",
-      "Visual Studio Code",
-      "Figma",
-    ],
-  },
-];
 
 export default function Home() {
   const [lang, setLang] = useState("en");
