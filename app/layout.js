@@ -14,8 +14,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Rendy Achmad | Software Engineer",
-  description: "Fullstack Web Developer Portfolio",
+  title: "Rendy Achmad | Fullstack Developer",
+  description: "Fullstack Developer Portfolio",
 };
 
 export default function RootLayout({ children }) {
