@@ -44,7 +44,7 @@ export default function Home() {
         >
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
             <div className="order-last flex w-full flex-col items-center text-center lg:order-first lg:items-start lg:text-left">
-              
+
               {/* Badge */}
               <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-orange-500/30 bg-orange-500/5 px-4 py-1.5 text-xs sm:text-sm font-medium text-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.1)] transition-colors hover:bg-orange-500/10">
                 <span className="relative flex h-2 w-2">
@@ -265,6 +265,7 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
             {PROJECTS.map((project) => {
               const projectData = t.projects.items[project.translationKey];
+              const hasLiveDemo = Boolean(project.liveUrl);
 
               return (
                 <article
@@ -282,9 +283,15 @@ export default function Home() {
 
                   <div className="flex flex-1 flex-col p-6 sm:p-8">
                     <div className="mb-4">
-                      <p className="mb-2 text-xs font-bold uppercase tracking-wider text-orange-500">
-                        {projectData.type}
-                      </p>
+                      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+                        <p className="text-xs font-bold uppercase tracking-wider text-orange-500">
+                          {projectData.type}
+                        </p>
+                        <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
+                          {project.role || 'Full Stack Developer'}
+                        </span>
+                      </div>
+
                       <h3 className="text-2xl font-bold text-white sm:text-3xl">
                         {project.title}
                       </h3>
@@ -294,7 +301,7 @@ export default function Home() {
                       {projectData.description}
                     </p>
 
-                    <div className="mt-auto flex flex-wrap gap-2">
+                    <div className="mb-8 flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
@@ -303,6 +310,27 @@ export default function Home() {
                           {tech}
                         </span>
                       ))}
+                    </div>
+
+                    <div className="mt-auto flex items-center gap-3">
+                      {hasLiveDemo ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/25"
+                        >
+                          View Project
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          disabled
+                          className="inline-flex cursor-not-allowed items-center justify-center rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-gray-500"
+                        >
+                          Private Repository
+                        </button>
+                      )}
                     </div>
                   </div>
                 </article>
