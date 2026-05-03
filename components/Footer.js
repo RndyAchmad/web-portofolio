@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { href: "#education", key: "education" },
   { href: "#tech-stack", key: "tech" },
   { href: "#experience", key: "experience" },
+  { href: "#projects", key: "project" },
   { href: "#connect", key: "connect" },
 ];
 

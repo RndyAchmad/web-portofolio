@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const NAV_ITEMS = [
-  { href: "#home", key: "home" },
+  { href: "/", key: "home" },
   { href: "#education", key: "education" },
   { href: "#tech-stack", key: "tech" },
   { href: "#experience", key: "experience" },
+  { href: "#projects", key: "project" },
   { href: "#connect", key: "connect" },
 ];
 
