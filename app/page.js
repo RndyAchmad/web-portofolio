@@ -128,6 +128,9 @@ export default function Home() {
                   UPN "Veteran" Jawa Timur
                 </h3>
                 <p className="text-sm font-medium text-gray-400 sm:text-base">{t.education.degree}</p>
+                <p className="mt-1 text-sm text-orange-400">
+                  {t.education.year}
+                </p>
               </div>
             </div>
 
@@ -194,7 +197,7 @@ export default function Home() {
 
           <div className="mx-auto max-w-5xl space-y-6 sm:space-y-8">
             {EXPERIENCES.map((exp) => {
-              const expData = t.experience[exp.translationKey];
+              const expData = t.experience.items[exp.translationKey];
 
               return (
                 <div
@@ -221,7 +224,7 @@ export default function Home() {
                         </p>
                         <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-bg px-3 py-1.5 text-xs font-medium text-gray-400">
                           <i className="far fa-calendar-alt text-orange-500/80"></i>
-                          {exp.date}
+                          {expData.period}
                         </div>
                       </div>
                     </div>
@@ -229,7 +232,7 @@ export default function Home() {
                     {/* Right Column: Descriptions */}
                     <div className="flex flex-1 items-start md:border-l md:border-white/10 md:pl-8">
                       <ul className="space-y-3 sm:space-y-4">
-                        {expData.map((item, index) => (
+                        {expData.key.map((item, index) => (
                           <li
                             key={index}
                             className="flex items-start gap-3.5 text-gray-400"

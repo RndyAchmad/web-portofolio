@@ -13,6 +13,7 @@ export const translations = {
             title: "Education",
             description: "My academic journey that shaped my logical thinking and technical foundation.",
             degree: "Information Systems Major",
+            year: "2022 - Present",
             gpa: "GPA 3.83 / 4.00"
         },
         skills: {
@@ -26,16 +27,24 @@ export const translations = {
         experience: {
             title: "Professional Experience",
             description: "A timeline of my professional growth and the impact I've made in various roles.",
-            exp1: [
-                "Developing end-to-end content automation systems using Laravel and PHP.",
-                "Designing modern, responsive UIs with Tailwind CSS and Blade Templating.",
-                "Optimizing database queries and integrating background automation."
-            ],
-            exp2: [
-                "Engineered RESTful APIs for complex ERP systems using Laravel.",
-                "Implemented Role Based Access Control and automated SMTP services.",
-                "Collaborated with frontend teams for seamless system integration."
-            ]
+            items: {
+                angsar: {
+                    period: "January 2026 - Present",
+                    key: [
+                        "Developing end-to-end content automation systems using Laravel and PHP.",
+                        "Designing modern, responsive UIs with Tailwind CSS and Blade Templating.",
+                        "Optimizing database queries and integrating background automation."
+                    ],
+                },
+                ordo: {
+                    period: "February 2025 - June 2026",
+                    key: [
+                        "Engineered RESTful APIs for complex ERP systems using Laravel.",
+                        "Implemented Role Based Access Control and automated SMTP services.",
+                        "Collaborated with frontend teams for seamless system integration."
+                    ]
+                },
+            },
         },
         footer: {
             description: "Fullstack Developer specialized in the",
@@ -95,6 +104,7 @@ export const translations = {
             title: "Pendidikan",
             description: "Perjalanan akademik yang membentuk pola pikir logis dan fondasi teknis saya.",
             degree: "Jurusan Sistem Informasi",
+            year: "2022 - Sekarang",
             gpa: "IPK 3.83 / 4.00"
         },
         skills: {
@@ -108,16 +118,24 @@ export const translations = {
         experience: {
             title: "Pengalaman Profesional",
             description: "Rekam jejak pertumbuhan profesional dan dampak yang saya berikan dalam berbagai peran.",
-            exp1: [
-                "Mengembangkan sistem otomatisasi konten end-to-end menggunakan Laravel dan PHP.",
-                "Mendesain UI modern dan responsif dengan Tailwind CSS dan Blade Templating.",
-                "Mengoptimalkan query database dan integrasi otomatisasi background task."
-            ],
-            exp2: [
-                "Membangun RESTful API untuk sistem ERP kompleks menggunakan Laravel.",
-                "Mengimplementasikan Role Based Access Control dan layanan email SMTP otomatis.",
-                "Berkolaborasi dengan tim frontend untuk integrasi sistem."
-            ]
+            items: {
+                angsar: {
+                    period: "Januari 2026 - Sekarang",
+                    key: [
+                        "Mengembangkan sistem otomatisasi konten end-to-end menggunakan Laravel dan PHP.",
+                        "Mendesain UI modern dan responsif dengan Tailwind CSS dan Blade Templating.",
+                        "Mengoptimalkan query database dan integrasi otomatisasi background task."
+                    ],
+                },
+                ordo: {
+                    period: "Februari 2025 - Juni 2025",
+                    key: [
+                        "Membangun RESTful API untuk sistem ERP kompleks menggunakan Laravel.",
+                        "Mengimplementasikan Role Based Access Control dan layanan email SMTP otomatis.",
+                        "Berkolaborasi dengan tim frontend untuk integrasi sistem."
+                    ],
+                },
+            },
         },
         footer: {
             description: "Fullstack Developer yang berspesialisasi dalam ekosistem",
