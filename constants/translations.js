@@ -50,6 +50,10 @@ export const translations = {
             description: "A showcase of my work and contributions in the tech world.",
             viewProject: "View Details",
             items: {
+                olimportal: {
+                    type: "Content Automation Platform",
+                    description: "A content automation system designed to manage the entire workflow of digital content production and distribution. The platform supports data collection through scraping, automated content creation, as well as scheduling and publishing to various platforms like Instagram. With an integrated workflow, content can be processed, prepared, and published efficiently, consistently, and at scale.",
+                },
                 fuomo: {
                     type: "Creator Monetization Platform",
                     description: "A digital platform that empowers creators to share and monetize exclusive content, including photos, audio, illustrations, and direct supporter interactions.",
@@ -78,7 +82,7 @@ export const translations = {
         },
     },
     id: {
-        nav: { home: "beranda", education: "pendidikan", tech: "teknologi", experience: "pengalaman", connect: "hubungi" , project: "proyek" },
+        nav: { home: "beranda", education: "pendidikan", tech: "teknologi", experience: "pengalaman", connect: "hubungi", project: "proyek" },
         hero: {
             badge: "Siap membangun hal hebat? Mari terhubung!",
             greet: "Halo, Saya",
@@ -128,6 +132,10 @@ export const translations = {
             description: "Kumpulan proyek dan kontribusi yang telah saya kerjakan di dunia teknologi.",
             viewProject: "Lihat Detail",
             items: {
+                olimportal: {
+                    type: "Platform Automasi Konten",
+                    description: "Sistem automasi konten yang dirancang untuk mengelola seluruh alur produksi dan distribusi konten digital. Platform ini mendukung pengumpulan data melalui scraping, pembuatan konten secara otomatis, serta penjadwalan dan publikasi ke berbagai platform seperti Instagram. Dengan alur kerja terintegrasi, konten dapat diproses, disiapkan, dan dipublikasikan secara efisien, konsisten, dan terukur.",
+                },
                 fuomo: {
                     type: "Platform Monetisasi Kreator",
                     description: "Platform digital yang membantu kreator membagikan dan memonetisasi konten eksklusif mereka, seperti foto, audio, ilustrasi, serta interaksi langsung dengan pendukung.",

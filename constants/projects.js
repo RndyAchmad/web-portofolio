@@ -1,9 +1,16 @@
 export const PROJECTS = [
     {
+        title: "Olimportal",
+        image: "/images/projects/olimportal.png",
+        translationKey: "olimportal",
+        technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Jquery", "Ajax", "Tailwind CSS", "Datatables", "Guzzle"],
+        role: "Fullstack Developer",
+    },
+    {
         title: "FUOMO",
         image: "/images/projects/fuomo-desktop.jpeg",
         translationKey: "fuomo",
-        technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Jquery", "Ajax", "Sass"],
+        technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Jquery", "Ajax", "Sass", "Redis"],
         role: "Backend Developer",
         liveUrl: "https://fuomo.id",
     },
