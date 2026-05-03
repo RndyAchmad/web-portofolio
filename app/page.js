@@ -8,13 +8,7 @@ import { translations } from "@/constants/translations";
 import { PROJECTS } from "@/constants/projects";
 import { EXPERIENCES } from "@/constants/experiences";
 import { SKILLS } from "@/constants/skills";
-
-const SOCIAL_LINKS = {
-  github: "https://github.com/rndyachmad",
-  linkedin: "https://linkedin.com/in/rendyachmad/",
-  email:
-    "mailto:rendyachmad55@gmail.com?subject=Collaboration%20Inquiry&body=Hi%20Rendy,%20I%20would%20like%20to%20discuss...",
-};
+import { SOCIAL_LINKS } from "@/constants/social-links";
 
 export default function Home() {
   const [lang, setLang] = useState("en");
@@ -29,6 +23,9 @@ export default function Home() {
     localStorage.setItem("lang", newLang);
   };
 
+  const githubLink = SOCIAL_LINKS.find(
+    ({ name }) => name === "GitHub"
+  );
   const t = translations[lang];
 
   return (
@@ -84,15 +81,17 @@ export default function Home() {
                   <i className="fas fa-download text-sm transition-transform group-hover:translate-y-0.5"></i>
                 </a>
 
-                <a
-                  href={SOCIAL_LINKS.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-[#101010] px-8 py-3.5 text-base font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-[#1a1a1a]"
-                >
-                  <i className="fab fa-github text-lg"></i>
-                  <span>{t.hero.cta_github}</span>
-                </a>
+                {githubLink && (
+                  <a
+                    href={githubLink.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-[#101010] px-8 py-3.5 text-base font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-[#1a1a1a]"
+                  >
+                    <i className="fab fa-github text-lg"></i>
+                    <span>{t.hero.cta_github}</span>
+                  </a>
+                )}
               </div>
             </div>
 
@@ -351,35 +350,19 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
-            {[
-              {
-                name: 'Email',
-                href: SOCIAL_LINKS.email,
-                icon: 'fas fa-envelope',
-              },
-              {
-                name: 'LinkedIn',
-                href: SOCIAL_LINKS.linkedin,
-                icon: 'fab fa-linkedin-in',
-              },
-              {
-                name: 'GitHub',
-                href: SOCIAL_LINKS.github,
-                icon: 'fab fa-github',
-              },
-            ].map((contact) => (
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
+            {SOCIAL_LINKS.map((contact) => (
               <a
                 key={contact.name}
                 href={contact.href}
-                target={contact.name !== 'Email' ? '_blank' : undefined}
-                rel={contact.name !== 'Email' ? 'noopener noreferrer' : undefined}
+                target={contact.external ? "_blank" : undefined}
+                rel={contact.external ? "noopener noreferrer" : undefined}
                 className="group flex flex-col items-center justify-center gap-5 rounded-2xl border border-white/5 bg-surface p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-orange-500/50 hover:bg-orange-500/5 hover:shadow-[0_10px_30px_rgba(249,115,22,0.1)]"
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-bg text-2xl text-orange-500 shadow-inner transition-transform duration-300 group-hover:scale-110 group-hover:border-orange-500/30">
                   <i className={contact.icon}></i>
                 </div>
-                <span className="block text-sm font-bold uppercase tracking-widest text-white">
+                <span className="text-sm font-bold uppercase tracking-widest text-white">
                   {contact.name}
                 </span>
               </a>

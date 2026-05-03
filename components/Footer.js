@@ -23,11 +23,7 @@ function FooterSection({ title, children }) {
 export default function Footer({ t, socialLinks }) {
   const currentYear = new Date().getFullYear();
 
-  const footerSocials = [
-    { name: "github", href: socialLinks.github },
-    { name: "linkedin", href: socialLinks.linkedin },
-    { name: "email", href: socialLinks.email },
-  ];
+  const footerSocials = socialLinks;
 
   return (
     <footer className="mt-auto border-t border-white/10 bg-bg font-mono">
@@ -76,8 +72,8 @@ export default function Footer({ t, socialLinks }) {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={link.external ? "_blank" : undefined}
+                      rel={link.external ? "noopener noreferrer" : undefined}
                       className="inline-block capitalize text-gray-400 transition-all hover:translate-x-1 hover:text-orange-500"
                     >
                       {link.name}
