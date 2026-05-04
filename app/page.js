@@ -358,8 +358,8 @@ export default function Home() {
               <a
                 key={contact.name}
                 href={contact.href}
-                target={contact.external ? "_blank" : undefined}
-                rel={contact.external ? "noopener noreferrer" : undefined}
+                target={contact.href.startsWith("http") ? "_blank" : undefined}
+                rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="group flex flex-col items-center justify-center gap-5 rounded-2xl border border-white/5 bg-surface p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-orange-500/50 hover:bg-orange-500/5 hover:shadow-[0_10px_30px_rgba(249,115,22,0.1)]"
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-bg text-2xl text-orange-500 shadow-inner transition-transform duration-300 group-hover:scale-110 group-hover:border-orange-500/30">
