@@ -37,7 +37,7 @@ export const translations = {
                     ],
                 },
                 ordo: {
-                    period: "February 2025 - June 2026",
+                    period: "February 2025 - June 2025",
                     key: [
                         "Engineered RESTful APIs for complex ERP systems using Laravel.",
                         "Implemented Role Based Access Control and automated SMTP services.",
