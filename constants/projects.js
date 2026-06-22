@@ -43,5 +43,13 @@ export const PROJECTS = [
         technologies: ["Laravel", "Livewire", "Volt", "Alpine.js", "PHP", "MySQL", "JavaScript"],
         role: "Backend Developer",
         liveUrl: "https://github.com/RndyAchmad/dashboard-dwo",
+    },
+    {
+        title: "Solemate",
+        image: "/images/projects/solemate.png",
+        translationKey: "solemate",
+        technologies: ["Flutter", "Dart", "Firebase"],
+        role: "Mobile Developer",
+        liveUrl: "https://github.com/RndyAchmad/solemate"
     }
 ];

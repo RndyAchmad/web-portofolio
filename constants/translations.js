@@ -83,6 +83,10 @@ export const translations = {
                     type: "Data Analytics Dashboard",
                     description: "An interactive DWO dashboard application developed using Laravel, Livewire, and the Volt Laravel Admin Template to visualize insights from the AdventureWorks Data Warehouse model. This project was created as a final semester assignment for the Data Warehouse and OLAP course, with a focus on presenting data interactively to support multidimensional analysis and data-driven decision-making.",
                 },
+                solemate: {
+                    type: "Flutter Mobile E-Commerce App",
+                    description: "Solemate is a simple mobile e-commerce application developed using Flutter for learning and skill development purposes in mobile app development. The application includes essential features such as user login, product catalog, product details, shopping cart, and a modern responsive user interface. This project was created to explore Flutter fundamentals, state management, page navigation, and structured mobile application development.",
+                },
             }
         },
         connect: {
@@ -173,6 +177,10 @@ export const translations = {
                 dwo: {
                     type: "Dashboard Analitik Data",
                     description: "Aplikasi dashboard DWO interaktif yang dikembangkan menggunakan Laravel, Livewire, dan Volt Laravel Admin Template untuk memvisualisasikan wawasan dari model Data Warehouse AdventureWorks. Proyek ini dibuat sebagai tugas akhir semester untuk mata kuliah Data Warehouse dan OLAP, dengan fokus pada penyajian data secara interaktif untuk mendukung analisis multidimensi dan pengambilan keputusan berbasis data.",
+                },
+                solemate: {
+                    type: "Flutter Mobile E-Commerce App",
+                    description: "Solemate adalah aplikasi mobile e-commerce sederhana yang dikembangkan menggunakan Flutter sebagai media pembelajaran dan pengembangan keterampilan mobile development. Aplikasi ini mencakup fitur dasar seperti login, katalog produk, detail produk, keranjang belanja, dan antarmuka modern yang responsif. Proyek ini dibuat untuk memahami konsep fundamental Flutter, pengelolaan state, navigasi antar halaman, serta pengembangan aplikasi mobile yang terstruktur.",
                 },
             }
         },
