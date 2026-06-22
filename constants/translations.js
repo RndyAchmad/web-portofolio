@@ -59,6 +59,10 @@ export const translations = {
             description: "A showcase of my work and contributions in the tech world.",
             viewProject: "View Details",
             items: {
+                alfirdaus: {
+                    type: "Mosque Management Information System",
+                    description: "Masjid Al Firdaus is a web-based digital platform developed to support mosque information management and community engagement. The system provides prayer schedules, mosque profiles, community activities, Islamic articles, financial reports, and contact information within a single accessible platform. Built with Laravel, the project focuses on information accessibility, transparency, and a responsive user experience across desktop and mobile devices.",
+                },
                 olimportal: {
                     type: "Content Automation Platform",
                     description: "A content automation system designed to manage the entire workflow of digital content production and distribution. The platform supports data collection through scraping, automated content creation, as well as scheduling and publishing to various platforms like Instagram. With an integrated workflow, content can be processed, prepared, and published efficiently, consistently, and at scale.",
@@ -154,6 +158,10 @@ export const translations = {
             description: "Kumpulan proyek dan kontribusi yang telah saya kerjakan di dunia teknologi.",
             viewProject: "Lihat Detail",
             items: {
+                alfirdaus: {
+                    type: "Sistem Informasi Manajemen Masjid",
+                    description: "Masjid Al Firdaus adalah platform digital berbasis web yang dikembangkan untuk mendukung pengelolaan dan penyebaran informasi kegiatan masjid. Sistem ini menyediakan fitur jadwal sholat, profil masjid, kegiatan jamaah, artikel keislaman, laporan keuangan, serta informasi kontak dalam satu platform yang mudah diakses. Proyek ini dibangun menggunakan Laravel dengan fokus pada kemudahan akses informasi, transparansi, dan pengalaman pengguna yang responsif di berbagai perangkat.",
+                },
                 olimportal: {
                     type: "Platform Automasi Konten",
                     description: "Sistem automasi konten yang dirancang untuk mengelola seluruh alur produksi dan distribusi konten digital. Platform ini mendukung pengumpulan data melalui scraping, pembuatan konten secara otomatis, serta penjadwalan dan publikasi ke berbagai platform seperti Instagram. Dengan alur kerja terintegrasi, konten dapat diproses, disiapkan, dan dipublikasikan secara efisien, konsisten, dan terukur.",

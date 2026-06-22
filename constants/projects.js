@@ -1,9 +1,17 @@
 export const PROJECTS = [
     {
+        title: "Masjid Al Firdaus",
+        image: "/images/projects/alfirdaus-dashboard.png",
+        translationKey: "alfirdaus",
+        technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Jquery", "Ajax", "Tailwind CSS", "Rest API"],
+        role: "Fullstack Developer",
+        liveUrl: "https://github.com/RndyAchmad/sim-masjid-al-firdaus",
+    },
+    {
         title: "Olimportal",
         image: "/images/projects/olimportal.png",
         translationKey: "olimportal",
-        technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Jquery", "Ajax", "Tailwind CSS", "Datatables", "Guzzle"],
+        technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Jquery", "Ajax", "Tailwind CSS", "Datatables", "Guzzle", "Instagram Graph API"],
         role: "Fullstack Developer",
     },
     {
