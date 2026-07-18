@@ -59,6 +59,10 @@ export const translations = {
             description: "A showcase of my work and contributions in the tech world.",
             viewProject: "View Details",
             items: {
+                gestureblur: {
+                    type: "Computer Vision Web App",
+                    description: "A real-time Computer Vision application that detects specific hand gestures (Peace sign) to trigger a privacy blur effect on the live camera feed, utilizing MediaPipe for client-side AI processing.",
+                },
                 alfirdaus: {
                     type: "Mosque Management Information System",
                     description: "Masjid Al Firdaus is a web-based digital platform developed to support mosque information management and community engagement. The system provides prayer schedules, mosque profiles, community activities, Islamic articles, financial reports, and contact information within a single accessible platform. Built with Laravel, the project focuses on information accessibility, transparency, and a responsive user experience across desktop and mobile devices.",
@@ -158,6 +162,10 @@ export const translations = {
             description: "Kumpulan proyek dan kontribusi yang telah saya kerjakan di dunia teknologi.",
             viewProject: "Lihat Detail",
             items: {
+                gestureblur: {
+                    type: "Aplikasi Web Computer Vision",
+                    description: "Aplikasi Computer Vision real-time yang mendeteksi gestur tangan spesifik (pose 'Peace') untuk memicu efek blur privasi pada feed kamera secara langsung, memanfaatkan MediaPipe untuk pemrosesan AI di sisi klien.",
+                },
                 alfirdaus: {
                     type: "Sistem Informasi Manajemen Masjid",
                     description: "Masjid Al Firdaus adalah platform digital berbasis web yang dikembangkan untuk mendukung pengelolaan dan penyebaran informasi kegiatan masjid. Sistem ini menyediakan fitur jadwal sholat, profil masjid, kegiatan jamaah, artikel keislaman, laporan keuangan, serta informasi kontak dalam satu platform yang mudah diakses. Proyek ini dibangun menggunakan Laravel dengan fokus pada kemudahan akses informasi, transparansi, dan pengalaman pengguna yang responsif di berbagai perangkat.",

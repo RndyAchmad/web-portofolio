@@ -1,5 +1,13 @@
 export const PROJECTS = [
     {
+        title: "Gesture Blur Camera",
+        image: "/images/projects/gesture-blur.png",
+        translationKey: "gestureblur",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MediaPipe", "AI", "Vercel"],
+        role: "Fullstack & AI Developer",
+        liveUrl: "https://gesture-blur-camera.rendyachmad.my.id/",
+    },
+    {
         title: "Masjid Al Firdaus",
         image: "/images/projects/alfirdaus-dashboard.png",
         translationKey: "alfirdaus",
