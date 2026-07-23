@@ -7,10 +7,6 @@ export default function robots() {
                 userAgent: "*",
                 allow: "/",
             },
-            {
-                userAgent: "Googlebot",
-                allow: "/",
-            },
         ],
         host: siteUrl,
         sitemap: `${siteUrl}/sitemap.xml`,

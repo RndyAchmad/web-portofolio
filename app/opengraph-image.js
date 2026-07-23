@@ -7,6 +7,8 @@ export const size = {
 
 export const contentType = "image/png";
 
+export const alt = "Rendy Achmadiansyah Mukti - Fullstack Web Developer, Laravel, and Next.js Developer";
+
 export default function OpenGraphImage() {
     return new ImageResponse(
         (
