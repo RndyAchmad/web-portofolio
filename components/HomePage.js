@@ -15,6 +15,8 @@ const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Rendy Achmadiansyah Mukti",
+    description:
+        "Fullstack Web Developer specializing in Laravel, Next.js, React, PHP, and scalable backend development.",
     jobTitle: "Fullstack Web Developer",
     url: "https://rendyachmad.my.id",
     image: "https://rendyachmad.my.id/og-image.png",
@@ -33,6 +35,14 @@ const personSchema = {
         name: "Rendy Achmadiansyah Mukti",
     },
     knowsAbout: SKILLS.flatMap((skill) => skill.items),
+    knowsLanguage: [
+        "Indonesian",
+        "English",
+    ],
+    nationality: {
+        "@type": "Country",
+        name: "Indonesia",
+    },
 };
 
 export default function HomePage() {
