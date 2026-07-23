@@ -7,14 +7,16 @@ export const translations = {
             description: "A Fullstack Web Developer specialized in the Laravel ecosystem. I build end-to-end applications, from robust backend architectures to modern, responsive user interfaces.",
             subDescription: "Proven experience in developing ERP systems and content automation solutions with a focus on clean code and performance.",
             cta_cv: "View CV",
-            cta_github: "GitHub Portfolio"
+            cta_github: "GitHub Portfolio",
+            cv_file: "/dokumen/cv-rendy-en.pdf"
         },
         education: {
             title: "Education",
-            description: "My academic journey that shaped my logical thinking and technical foundation.",
-            degree: "Information Systems Major",
-            year: "2022 - 2026",
-            gpa: "GPA 3.83 / 4.00"
+            description: "Bachelor of Information Systems with a strong foundation in backend development, software engineering, database systems, and modern web application development.",
+            degree: "Bachelor of Information Systems",
+            university: 'Universitas Pembangunan Nasional "Veteran" Jawa Timur',
+            year: "2022 – 2026",
+            gpa: "GPA: 3.83 / 4.00"
         },
         skills: {
             title: "Tech Stack",
@@ -31,18 +33,23 @@ export const translations = {
                 angsar: {
                     period: "January 2026 - June 2026",
                     key: [
-                        "Developing end-to-end content automation systems using Laravel and PHP.",
-                        "Designing modern, responsive UIs with Tailwind CSS and Blade Templating.",
-                        "Optimizing database queries and integrating background automation."
+                        "Developed an end-to-end Content Automation Platform that transformed the competition content publishing process from manual to a semi-automated workflow.",
+                        "Participated in the entire Software Development Life Cycle (SDLC), including Product Requirements Document (PRD), ERD and Sequence Diagram design, application development, and Black Box Testing.",
+                        "Built the backend using Laravel and MySQL to manage web scraping, content processing, scheduling, and automated publishing.",
+                        "Implemented automated web scraping with Guzzle and integrated the Meta Instagram Graph API for multi-platform content publishing.",
+                        "Implemented Laravel Queue and Task Scheduling to execute scraping, data processing, and publishing tasks asynchronously, improving operational efficiency and application performance.",
+                        "Developed the administrative dashboard using Laravel Blade, Tailwind CSS, AJAX, and DataTables while optimizing database queries for better performance."
                     ],
                 },
                 ordo: {
                     period: "February 2025 - June 2025",
                     key: [
-                        "Engineered RESTful APIs for complex ERP systems using Laravel.",
-                        "Implemented Role Based Access Control and automated SMTP services.",
-                        "Collaborated with frontend teams for seamless system integration."
-                    ]
+                        "Contributed to the development and maintenance of multiple client web applications in a software house environment while adapting to evolving business requirements.",
+                        "Developed RESTful APIs using Laravel and PHP to support ERP modules and seamless integration between backend and frontend services.",
+                        "Designed, managed, and optimized MySQL databases through relationship design, indexing, and query optimization to improve application performance and data integrity.",
+                        "Implemented Redis Cache, Laravel Queue Jobs, RBAC, DOMPDF, and SMTP email integration to enhance application performance, security, and functionality.",
+                        "Collaborated with frontend developers and QA engineers to integrate features, perform API testing with Laravel Test and Postman, and resolve bugs based on client feedback."
+                    ],
                 },
             },
         },
@@ -110,14 +117,16 @@ export const translations = {
             description: "Seorang Fullstack Web Developer yang berspesialisasi dalam ekosistem Laravel. Saya membangun aplikasi end-to-end, dari arsitektur backend yang kokoh hingga antarmuka pengguna yang modern dan responsif.",
             subDescription: "Pengalaman terbukti dalam mengembangkan sistem ERP dan solusi otomatisasi konten dengan fokus pada kode yang bersih dan performa.",
             cta_cv: "Lihat CV",
-            cta_github: "Portofolio GitHub"
+            cta_github: "Portofolio GitHub",
+            cv_file: "/dokumen/cv-rendy-id.pdf"
         },
         education: {
             title: "Pendidikan",
-            description: "Perjalanan akademik yang membentuk pola pikir logis dan fondasi teknis saya.",
-            degree: "Jurusan Sistem Informasi",
-            year: "2022 - 2026",
-            gpa: "IPK 3.83 / 4.00"
+            description: "Lulusan S1 Sistem Informasi dengan dasar yang kuat dalam rekayasa perangkat lunak, pengembangan backend, perancangan basis data, dan pengembangan aplikasi web modern.",
+            degree: "S1 Sistem Informasi",
+            university: 'Universitas Pembangunan Nasional "Veteran" Jawa Timur',
+            year: "2022 – 2026",
+            gpa: "IPK: 3.83 / 4.00"
         },
         skills: {
             title: "Infrastruktur Teknologi",
@@ -134,17 +143,22 @@ export const translations = {
                 angsar: {
                     period: "Januari 2026 - Juni 2026",
                     key: [
-                        "Mengembangkan sistem otomatisasi konten end-to-end menggunakan Laravel dan PHP.",
-                        "Mendesain UI modern dan responsif dengan Tailwind CSS dan Blade Templating.",
-                        "Mengoptimalkan query database dan integrasi otomatisasi background task."
+                        "Mengembangkan Platform Otomasi Konten secara end-to-end yang mentransformasi proses publikasi informasi lomba dari manual menjadi semi-otomatis melalui alur kerja yang terintegrasi.",
+                        "Terlibat pada seluruh Software Development Life Cycle (SDLC), mulai dari penyusunan Product Requirement Document (PRD), perancangan ERD dan Sequence Diagram, pengembangan aplikasi, hingga Black Box Testing.",
+                        "Membangun backend menggunakan Laravel dan MySQL untuk mengelola proses web scraping, pengolahan konten, penjadwalan, dan publikasi otomatis.",
+                        "Mengimplementasikan web scraping menggunakan Guzzle serta mengintegrasikan Instagram Graph API untuk mendukung publikasi konten ke berbagai platform.",
+                        "Menggunakan Laravel Queue dan Task Scheduling untuk menjalankan proses scraping, pengolahan data, dan publikasi secara asynchronous sehingga meningkatkan efisiensi operasional.",
+                        "Membangun antarmuka admin menggunakan Laravel Blade, Tailwind CSS, AJAX, dan DataTables serta mengoptimalkan performa query database."
                     ],
                 },
                 ordo: {
                     period: "Februari 2025 - Juni 2025",
                     key: [
-                        "Membangun RESTful API untuk sistem ERP kompleks menggunakan Laravel.",
-                        "Mengimplementasikan Role Based Access Control dan layanan email SMTP otomatis.",
-                        "Berkolaborasi dengan tim frontend untuk integrasi sistem."
+                        "Terlibat dalam pengembangan dan pemeliharaan beberapa aplikasi web milik klien pada lingkungan software house dengan menyesuaikan kebutuhan bisnis dan perubahan requirement.",
+                        "Mengembangkan RESTful API menggunakan Laravel dan PHP untuk mendukung berbagai modul sistem ERP serta integrasi antara backend dan frontend.",
+                        "Merancang, mengelola, dan mengoptimalkan basis data MySQL melalui perbaikan struktur relasi, indexing, serta optimasi query untuk meningkatkan performa aplikasi.",
+                        "Mengimplementasikan Redis Cache, Laravel Queue Jobs, RBAC, DOMPDF, dan SMTP Mail Server untuk meningkatkan efisiensi, keamanan, dan fungsionalitas aplikasi.",
+                        "Berkolaborasi dengan tim Frontend dan QA dalam proses integrasi fitur, pengujian API menggunakan Laravel Test dan Postman, serta penyelesaian bug berdasarkan masukan klien."
                     ],
                 },
             },

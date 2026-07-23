@@ -72,7 +72,7 @@ export default function Home() {
               {/* Buttons CTA */}
               <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:justify-center lg:justify-start">
                 <a
-                  href="/dokumen/cv-rendy.pdf"
+                  href={t.hero.cv_file}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-8 py-3.5 text-base font-bold text-black shadow-[0_0_20px_rgba(249,115,22,0.3)] transition-all duration-300 hover:-translate-y-1 hover:bg-orange-400 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
