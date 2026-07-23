@@ -88,7 +88,7 @@ export default function Footer({ t, socialLinks }) {
           <div className="sm:col-span-2 lg:col-span-3">
             <div className="flex h-full items-center rounded-xl border border-white/5 bg-surface p-5 transition-colors hover:border-orange-500/30">
               <p className="w-full text-center text-sm italic leading-relaxed text-gray-400 lg:text-left">
-                "{t.footer.mantra}"
+                &quot;{t.footer.mantra}&quot;
               </p>
             </div>
           </div>

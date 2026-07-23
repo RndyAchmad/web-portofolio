@@ -19,7 +19,7 @@ export default function Navbar({ lang, setLang, t }) {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md text-white">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md text-white">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-10">
         <Link
           href="/"

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Rendy Achmad portfolio icon">
+  <rect width="256" height="256" rx="48" fill="#0a0a0a"/>
+  <path d="M52 184V72h30l42 54 42-54h30v112h-28V120l-44 56-44-56v64H52z" fill="#f97316"/>
+  <circle cx="200" cy="76" r="16" fill="#f97316" opacity="0.85"/>
+</svg>
