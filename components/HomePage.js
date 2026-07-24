@@ -277,7 +277,7 @@ export default function HomePage() {
                             return (
                                 <article
                                     key={service.translationKey}
-                                    className="group flex flex-col items-center text-center rounded-2xl border border-white/5 bg-[#161616] p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500/50 hover:bg-[#1a1a1a]"
+                                    className="group flex flex-col items-center text-center rounded-2xl border border-white/5 bg-surface p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500/50 hover:bg-[#1a1a1a]"
                                 >
                                     <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-500 border border-orange-500/20 transition-transform duration-300 group-hover:scale-110">
                                         <Icon size={30} aria-hidden="true" />
@@ -306,7 +306,7 @@ export default function HomePage() {
                         </p>
                     </div>
 
-                    <article className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 rounded-2xl border border-white/5 bg-[#161616] p-6 shadow-xl sm:flex-row sm:p-8">
+                    <article className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 rounded-2xl border border-white/5 bg-surface p-6 shadow-xl sm:flex-row sm:p-8">
                         <div className="flex flex-col items-center gap-5 sm:flex-row">
                             <div className="h-20 w-20 shrink-0 rounded-2xl bg-white/5 p-2.5">
                                 <Image
@@ -348,7 +348,7 @@ export default function HomePage() {
                         {SKILLS.map((skill) => (
                             <article
                                 key={skill.key}
-                                className="group flex flex-col items-center rounded-2xl border border-white/5 bg-[#161616] p-6 transition-all duration-300 hover:border-orange-500/40"
+                                className="group flex flex-col items-center rounded-2xl border border-white/5 bg-surface p-6 transition-all duration-300 hover:border-orange-500/40"
                             >
                                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#222] text-2xl text-orange-500 border border-white/5 transition-transform duration-300 group-hover:scale-110">
                                     <i className={skill.icon}></i>
@@ -392,7 +392,7 @@ export default function HomePage() {
                             return (
                                 <article
                                     key={`${exp.company}-${exp.role}`}
-                                    className="rounded-2xl border border-white/5 bg-[#161616] p-6 transition-all duration-300 hover:border-orange-500/30 sm:p-8"
+                                    className="rounded-2xl border border-white/5 bg-surface p-6 transition-all duration-300 hover:border-orange-500/30 sm:p-8"
                                 >
                                     <div className="flex flex-col gap-6 md:flex-row md:gap-8">
                                         <div className="flex shrink-0 items-start gap-4 md:w-[35%] lg:w-[30%]">
@@ -462,7 +462,7 @@ export default function HomePage() {
                             return (
                                 <article
                                     key={project.title}
-                                    className="group flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-[#161616] shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500/40"
+                                    className="group flex flex-col overflow-hidden rounded-2xl border border-white/5 bg-surface shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500/40"
                                 >
                                     <div className="relative h-64 w-full overflow-hidden sm:h-72">
                                         <Image
@@ -473,7 +473,7 @@ export default function HomePage() {
                                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             loading="lazy"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#161616] via-transparent to-transparent"></div>
+                                        <div className="absolute inset-0 bg-linear-to-t from-surface via-transparent to-transparent"></div>
                                     </div>
 
                                     <div className="flex flex-1 flex-col p-6 sm:p-8">
@@ -553,7 +553,7 @@ export default function HomePage() {
                                 target={contact.external ? "_blank" : undefined}
                                 rel={contact.external ? "noopener noreferrer" : undefined}
                                 aria-label={`Open ${contact.name}`}
-                                className="group flex flex-col items-center justify-center gap-4 rounded-2xl border border-white/5 bg-[#161616] p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50 hover:bg-[#1a1a1a]"
+                                className="group flex flex-col items-center justify-center gap-4 rounded-2xl border border-white/5 bg-surface p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/50 hover:bg-[#1a1a1a]"
                             >
                                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#222] text-xl text-orange-500 border border-white/5 transition-transform duration-300 group-hover:scale-110">
                                     <i className={contact.icon}></i>
