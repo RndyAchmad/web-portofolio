@@ -14,35 +14,42 @@ import { SOCIAL_LINKS } from "@/constants/social-links";
 const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+
     name: "Rendy Achmadiansyah Mukti",
+
+    url: "https://rendyachmad.my.id",
+
+    image: "https://rendyachmad.my.id/images/og-image.png",
+
     description:
         "Fullstack Web Developer specializing in Laravel, Next.js, React, PHP, and scalable backend development.",
+
     jobTitle: "Fullstack Web Developer",
-    url: "https://rendyachmad.my.id",
-    image: "https://rendyachmad.my.id/images/og-image.png",
-    email: "rendyachmad55@gmail.com",
+
+    email: "mailto:rendyachmad55@gmail.com",
+
+    nationality: {
+        "@type": "Country",
+        name: "Indonesia",
+    },
+
+    alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "UPN Veteran Jawa Timur",
+    },
+
+    knowsLanguage: [
+        "Indonesian",
+        "English",
+    ],
+
     sameAs: [
         "https://github.com/rndyachmad",
         "https://linkedin.com/in/rendyachmad/",
         "https://instagram.com/rendyachmad.m",
     ],
-    alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "UPN Veteran Jawa Timur",
-    },
-    worksFor: {
-        "@type": "Organization",
-        name: "Rendy Achmadiansyah Mukti",
-    },
-    knowsAbout: SKILLS.flatMap((skill) => skill.items),
-    knowsLanguage: [
-        "Indonesian",
-        "English",
-    ],
-    nationality: {
-        "@type": "Country",
-        name: "Indonesia",
-    },
+
+    knowsAbout: SKILLS.flatMap((item) => item.items),
 };
 
 export default function HomePage() {

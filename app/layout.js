@@ -14,76 +14,89 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://rendyachmad.my.id";
-const defaultTitle = "Rendy Achmadiansyah Mukti | Fullstack Web Developer";
+
+const defaultTitle =
+  "Rendy Achmadiansyah Mukti | Fullstack Web Developer";
+
 const defaultDescription =
-  "Rendy Achmadiansyah Mukti adalah Fullstack Web Developer, Backend Developer, Laravel Developer, dan Next.js Developer asal Indonesia. Portfolio ini menampilkan pengalaman kerja, pendidikan, skill, dan proyek digital yang dibangun secara end-to-end.";
+  "Fullstack Web Developer from Indonesia specializing in Laravel, Next.js, React, PHP, and scalable backend development. Explore my portfolio, professional experience, technical skills, and projects.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
+
   title: {
     default: defaultTitle,
     template: "%s | Rendy Achmadiansyah Mukti",
   },
+
   description: defaultDescription,
-  applicationName: "Rendy Achmadiansyah Mukti Portfolio",
+
   keywords: [
     "Rendy Achmadiansyah Mukti",
     "Rendy Achmad",
-    "Rendy Achmad Fullstack Developer",
-    "Rendy Achmadiansyah Mukti Portfolio",
     "Fullstack Web Developer",
     "Backend Developer",
     "Laravel Developer",
     "Next.js Developer",
+    "React Developer",
+    "PHP Developer",
     "Web Developer Indonesia",
-    "Portfolio Indonesia",
-    "Rendy Achmad portfolio",
+    "Portfolio",
   ],
-  authors: [
-    { name: "Rendy Achmadiansyah Mukti", url: siteUrl },
-  ],
+
+  applicationName: "Rendy Achmadiansyah Mukti Portfolio",
+
   creator: "Rendy Achmadiansyah Mukti",
   publisher: "Rendy Achmadiansyah Mukti",
+
+  authors: [
+    {
+      name: "Rendy Achmadiansyah Mukti",
+      url: siteUrl,
+    },
+  ],
+
   alternates: {
     canonical: siteUrl,
-    languages: {
-      "id-ID": siteUrl,
-      "en-US": siteUrl,
-    },
   },
+
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
     },
   },
+
   openGraph: {
     type: "website",
-    locale: "id_ID",
+    locale: "en_US",
     url: siteUrl,
-    siteName: "Rendy Achmadiansyah Mukti Portfolio",
+    siteName: "Rendy Achmadiansyah Mukti",
     title: defaultTitle,
     description: defaultDescription,
     images: [
       {
-        url: "/images/og-image.png",
+        url: `${siteUrl}/images/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Rendy Achmadiansyah Mukti Portfolio Preview",
+        alt: "Rendy Achmadiansyah Mukti Portfolio",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
-    images: ["/twitter-image"],
     creator: "@rndyachmad",
+    images: [`${siteUrl}/images/og-image.png`],
   },
   icons: {
     icon: "/icon.svg",
