@@ -10,6 +10,43 @@ export const translations = {
             cta_github: "GitHub Portfolio",
             cv_file: "/dokumen/cv-rendy-en.pdf"
         },
+        about: {
+            title: "About Me",
+            heading: "Hi, I'm",
+            paragraph1: "I am a dedicated Fullstack Web Developer with a strong foundation in building scalable and reliable digital products. With deep expertise in the Laravel ecosystem and modern JavaScript frameworks like Next.js and React, I bridge the gap between robust backend architectures and intuitive user interfaces.",
+            paragraph2: "My professional journey involves developing comprehensive ERP systems and content automation solutions. I always prioritize clean code, performance optimization, and seamless user experiences. Whether it's architecting a database or crafting a responsive frontend, I am passionate about solving complex problems and turning ideas into functional, high-quality digital realities."
+        },
+        services: {
+            label: "SERVICES",
+            title: "What I Can Help You Build",
+            description: "I build scalable web applications, robust backend systems, and modern user experiences using Laravel, Next.js, and related technologies.",
+            items: {
+                backend: {
+                    title: "Backend Development",
+                    description: "Develop secure and scalable backend systems using Laravel, REST APIs, authentication, RBAC, queues, caching, and clean architecture.",
+                },
+                fullstack: {
+                    title: "Fullstack Web Development",
+                    description: "Build complete web applications using Laravel, Next.js, React, Tailwind CSS, and modern frontend technologies.",
+                },
+                database: {
+                    title: "Database Design",
+                    description: "Design optimized relational databases with MySQL, ensuring performance, scalability, and data integrity.",
+                },
+                api: {
+                    title: "API Integration",
+                    description: "Integrate third-party APIs including payment gateways, authentication providers, and external business services.",
+                },
+                dashboard: {
+                    title: "Admin Dashboard",
+                    description: "Develop modern internal dashboards, CMS platforms, reporting systems, and business management tools.",
+                },
+                deployment: {
+                    title: "Deployment & Maintenance",
+                    description: "Deploy applications using Vercel, VPS, Cloudflare, Nginx, and maintain production-ready environments.",
+                },
+            },
+        },
         education: {
             title: "Education",
             description: "Bachelor of Information Systems with a strong foundation in backend development, software engineering, database systems, and modern web application development.",
@@ -119,6 +156,43 @@ export const translations = {
             cta_cv: "Lihat CV",
             cta_github: "Portofolio GitHub",
             cv_file: "/dokumen/cv-rendy-id.pdf"
+        },
+        about: {
+            title: "Tentang Saya",
+            heading: "Halo, saya",
+            paragraph1: "Saya adalah seorang Fullstack Web Developer yang memiliki dedikasi tinggi dalam membangun produk digital yang andal dan dapat diskalakan. Dengan keahlian di ekosistem Laravel dan framework JavaScript modern seperti Next.js dan React, saya menjembatani arsitektur backend yang tangguh dengan antarmuka pengguna yang intuitif.",
+            paragraph2: "Perjalanan profesional saya melibatkan pengembangan sistem ERP komprehensif dan solusi otomatisasi konten. Saya selalu memprioritaskan penulisan kode yang bersih, optimalisasi performa, dan pengalaman pengguna yang mulus. Saya sangat antusias dalam memecahkan masalah kompleks dan mengubah ide menjadi realitas digital berkualitas tinggi."
+        },
+        services: {
+            label: "LAYANAN",
+            title: "Yang Bisa Saya Bantu Bangun",
+            description: "Saya membangun aplikasi web yang scalable, sistem backend yang kuat, dan pengalaman pengguna modern menggunakan Laravel, Next.js, serta teknologi terkait.",
+            items: {
+                backend: {
+                    title: "Pengembangan Backend",
+                    description: "Membangun sistem backend yang aman dan scalable menggunakan Laravel, REST API, autentikasi, RBAC, queue, caching, dan arsitektur bersih.",
+                },
+                fullstack: {
+                    title: "Pengembangan Web Fullstack",
+                    description: "Membangun aplikasi web lengkap menggunakan Laravel, Next.js, React, Tailwind CSS, dan teknologi frontend modern.",
+                },
+                database: {
+                    title: "Desain Database",
+                    description: "Merancang database relasional yang optimal dengan MySQL agar performa, skalabilitas, dan integritas data terjaga.",
+                },
+                api: {
+                    title: "Integrasi API",
+                    description: "Mengintegrasikan API pihak ketiga termasuk gateway pembayaran, provider autentikasi, dan layanan bisnis eksternal.",
+                },
+                dashboard: {
+                    title: "Dashboard Admin",
+                    description: "Mengembangkan dashboard internal modern, CMS, sistem pelaporan, dan alat manajemen bisnis.",
+                },
+                deployment: {
+                    title: "Deployment & Maintenance",
+                    description: "Mendeploy aplikasi menggunakan Vercel, VPS, Cloudflare, Nginx, dan menjaga environment produksi tetap siap pakai.",
+                },
+            },
         },
         education: {
             title: "Pendidikan",
