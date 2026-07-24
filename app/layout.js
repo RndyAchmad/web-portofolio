@@ -71,7 +71,7 @@ export const metadata = {
     description: defaultDescription,
     images: [
       {
-        url: "/opengraph-image",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Rendy Achmadiansyah Mukti Portfolio Preview",

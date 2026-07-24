@@ -19,7 +19,7 @@ const personSchema = {
         "Fullstack Web Developer specializing in Laravel, Next.js, React, PHP, and scalable backend development.",
     jobTitle: "Fullstack Web Developer",
     url: "https://rendyachmad.my.id",
-    image: "https://rendyachmad.my.id/og-image.png",
+    image: "https://rendyachmad.my.id/images/og-image.png",
     email: "rendyachmad55@gmail.com",
     sameAs: [
         "https://github.com/rndyachmad",
