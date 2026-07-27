@@ -5,9 +5,12 @@
     "short_name": "Rendy Portfolio",
     "description": "Portfolio of Rendy Achmadiansyah Mukti, Fullstack Web Developer, Backend Developer, Laravel Developer, and Next.js Developer from Indonesia.",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
+    "orientation": "portrait",
     "background_color": "#0a0a0a",
     "theme_color": "#f97316",
+    "categories": ["portfolio", "developer", "productivity"],
     "icons": [
         {
             "src": "/icon.svg",

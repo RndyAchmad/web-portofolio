@@ -2,7 +2,7 @@ import HomePage from "@/components/HomePage";
 
 export const metadata = {
   alternates: {
-    canonical: "/",
+    canonical: "https://rendyachmad.my.id/",
   },
 };
 

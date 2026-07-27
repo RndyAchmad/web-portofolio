@@ -26,7 +26,7 @@ export default function Footer({ t, socialLinks }) {
   const footerSocials = socialLinks;
 
   return (
-    <footer className="mt-auto border-t border-white/10 bg-bg font-mono">
+    <footer aria-label="Footer navigation" className="mt-auto border-t border-white/10 bg-bg font-mono">
       <div className="mx-auto max-w-7xl px-5 py-10 md:px-10 md:py-12">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
           {/* Brand */}

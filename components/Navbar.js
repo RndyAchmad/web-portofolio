@@ -19,7 +19,7 @@ export default function Navbar({ lang, setLang, t }) {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md text-white">
+    <nav aria-label="Primary navigation" className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md text-white">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-10">
         <Link
           href="/"
@@ -45,7 +45,10 @@ export default function Navbar({ lang, setLang, t }) {
 
           <div className="flex items-center gap-2 rounded-md border border-white/10 bg-surface px-2 py-1 font-mono text-[10px]">
             <button
+              type="button"
               onClick={() => setLang("en")}
+              aria-label="Switch language to English"
+              aria-pressed={lang === "en"}
               className={`px-1 transition hover:text-orange-500 ${lang === "en"
                   ? "font-bold text-orange-500"
                   : "text-gray-500"
@@ -55,7 +58,10 @@ export default function Navbar({ lang, setLang, t }) {
             </button>
             <span className="text-white opacity-20">|</span>
             <button
+              type="button"
               onClick={() => setLang("id")}
+              aria-label="Switch language to Indonesian"
+              aria-pressed={lang === "id"}
               className={`px-1 transition hover:text-orange-500 ${lang === "id"
                   ? "font-bold text-orange-500"
                   : "text-gray-500"
@@ -66,9 +72,12 @@ export default function Navbar({ lang, setLang, t }) {
           </div>
 
           <button
+            type="button"
             className="flex flex-col gap-1.5 p-2 md:hidden"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             <span
               className={`h-0.5 w-5 bg-orange-500 transition-all ${menuOpen ? "translate-y-2 rotate-45" : ""
@@ -87,6 +96,7 @@ export default function Navbar({ lang, setLang, t }) {
       </div>
 
       <div
+        id="mobile-navigation"
         className={`absolute w-full overflow-hidden border-b border-white/10 bg-bg/95 backdrop-blur-xl transition-all duration-300 md:hidden ${menuOpen ? "max-h-64 py-3" : "max-h-0 border-transparent py-0"
           }`}
       >

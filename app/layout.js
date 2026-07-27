@@ -45,21 +45,30 @@ export const metadata = {
   ],
 
   applicationName: "Rendy Achmadiansyah Mukti Portfolio",
-
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: defaultTitle,
+  },
+  category: "technology",
+  classification: "Portfolio Website",
   creator: "Rendy Achmadiansyah Mukti",
   publisher: "Rendy Achmadiansyah Mukti",
-
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
   authors: [
     {
       name: "Rendy Achmadiansyah Mukti",
       url: siteUrl,
     },
   ],
-
   alternates: {
     canonical: siteUrl,
   },
-
   robots: {
     index: true,
     follow: true,
@@ -71,10 +80,13 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
-
+  verification: {
+    google: "Ni7nnDl23e-HgWukIFrZJWHhKUXb4MXA76xIXkGCM1g",
+  },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "id_ID",
+    alternateLocale: "en_US",
     url: siteUrl,
     siteName: "Rendy Achmadiansyah Mukti",
     title: defaultTitle,
@@ -88,12 +100,12 @@ export const metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
     creator: "@rndyachmad",
+    site: "@rndyachmad",
     images: [`${siteUrl}/images/og-image.png`],
   },
   icons: {
@@ -104,10 +116,19 @@ export const metadata = {
   manifest: "/manifest.webmanifest",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#f97316",
+  colorScheme: "dark light",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="id" className="scroll-smooth">
       <head>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"

@@ -12,46 +12,6 @@ import { SKILLS } from "@/constants/skills";
 import { SOCIAL_LINKS } from "@/constants/social-links";
 import { SERVICES } from "@/constants/services";
 
-const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-
-    name: "Rendy Achmadiansyah Mukti",
-
-    url: "https://rendyachmad.my.id",
-
-    image: "https://rendyachmad.my.id/images/og-image.png",
-
-    description:
-        "Fullstack Web Developer specializing in Laravel, Next.js, React, PHP, and scalable backend development.",
-
-    jobTitle: "Fullstack Web Developer",
-
-    email: "mailto:rendyachmad55@gmail.com",
-
-    nationality: {
-        "@type": "Country",
-        name: "Indonesia",
-    },
-
-    alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "UPN Veteran Jawa Timur",
-    },
-
-    knowsLanguage: [
-        "Indonesian",
-        "English",
-    ],
-
-    sameAs: [
-        "https://github.com/rndyachmad",
-        "https://linkedin.com/in/rendyachmad/",
-        "https://instagram.com/rendyachmad.m",
-    ],
-
-    knowsAbout: SKILLS.flatMap((item) => item.items),
-};
 
 export default function HomePage() {
     const [lang, setLang] = useState(() => {
@@ -66,6 +26,96 @@ export default function HomePage() {
 
     const githubLink = SOCIAL_LINKS.find(({ name }) => name === "GitHub");
     const t = translations[lang];
+
+    const projectSchemaItems = PROJECTS.map((project) => {
+        const projectData = t.projects.items[project.translationKey];
+        const programmingLanguages = project.technologies.filter((tech) =>
+            ["Next.js", "React", "Laravel", "PHP", "TypeScript", "JavaScript", "Flutter", "Dart", "Tailwind CSS"].includes(tech)
+        );
+
+        return {
+            "@type": "SoftwareApplication",
+            name: project.title,
+            description: projectData.description,
+            url: project.liveUrl || "https://rendyachmad.my.id",
+            applicationCategory: "DeveloperApplication",
+            operatingSystem: ["Web", "Cross-platform"],
+            programmingLanguage: programmingLanguages,
+            author: {
+                "@type": "Person",
+                name: "Rendy Achmadiansyah Mukti",
+            },
+            publisher: {
+                "@type": "Organization",
+                name: "Rendy Achmadiansyah Mukti Portfolio",
+            },
+            image: `https://rendyachmad.my.id${project.image}`,
+        };
+    });
+
+    const personSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                name: "Rendy Achmadiansyah Mukti",
+                url: "https://rendyachmad.my.id",
+                image: "https://rendyachmad.my.id/images/og-image.png",
+                description:
+                    "Fullstack Web Developer specializing in Laravel, Next.js, React, PHP, and scalable backend development.",
+                jobTitle: "Fullstack Web Developer",
+                email: "mailto:rendyachmad55@gmail.com",
+                nationality: {
+                    "@type": "Country",
+                    name: "Indonesia",
+                },
+                alumniOf: {
+                    "@type": "CollegeOrUniversity",
+                    name: "UPN Veteran Jawa Timur",
+                },
+                knowsLanguage: ["Indonesian", "English"],
+                sameAs: [
+                    "https://github.com/rndyachmad",
+                    "https://linkedin.com/in/rendyachmad/",
+                    "https://instagram.com/rendyachmad.m",
+                ],
+                knowsAbout: SKILLS.flatMap((item) => item.items),
+                hasOccupation: {
+                    "@type": "Occupation",
+                    name: "Fullstack Web Developer",
+                    description: "Building scalable web applications and backend systems.",
+                },
+                worksFor: {
+                    "@type": "Organization",
+                    name: "Freelance / Independent Development",
+                },
+            },
+            {
+                "@type": "WebSite",
+                name: "Rendy Achmadiansyah Mukti Portfolio",
+                url: "https://rendyachmad.my.id",
+                description:
+                    "Portfolio website of Rendy Achmadiansyah Mukti featuring projects, services, experience, and contact information.",
+                inLanguage: "id-ID",
+                publisher: {
+                    "@id": "https://rendyachmad.my.id/#person",
+                },
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://rendyachmad.my.id/#organization",
+                name: "Rendy Achmadiansyah Mukti Portfolio",
+                url: "https://rendyachmad.my.id",
+                sameAs: [
+                    "https://github.com/rndyachmad",
+                    "https://linkedin.com/in/rendyachmad/",
+                    "https://instagram.com/rendyachmad.m",
+                ],
+                logo: "https://rendyachmad.my.id/images/og-image.png",
+            },
+            ...projectSchemaItems,
+        ],
+    };
 
     const skillDiagrams = [
         { name: "Laravel / PHP", percentage: 90, icon: "fab fa-laravel" },
@@ -173,9 +223,10 @@ export default function HomePage() {
                                 <div className="h-56 w-56 sm:h-72 sm:w-72 overflow-hidden rounded-3xl border border-orange-500/30 bg-[#1c1c1c] p-2 shadow-xl transition-transform duration-500 hover:scale-105">
                                     <Image
                                         src="/images/foto-pas.jpg"
-                                        alt="Rendy Achmadiansyah Mukti"
+                                        alt="Portrait of Rendy Achmadiansyah Mukti, Fullstack Web Developer"
                                         width={300}
                                         height={300}
+                                        priority
                                         className="h-full w-full rounded-2xl object-cover"
                                     />
                                 </div>
@@ -311,7 +362,7 @@ export default function HomePage() {
                             <div className="h-20 w-20 shrink-0 rounded-2xl bg-white/5 p-2.5">
                                 <Image
                                     src="/images/logo-upn.png"
-                                    alt="UPN Veteran Jawa Timur"
+                                    alt="UPN Veteran Jawa Timur logo"
                                     width={80}
                                     height={80}
                                     className="h-full w-full object-contain"
@@ -467,7 +518,7 @@ export default function HomePage() {
                                     <div className="relative h-64 w-full overflow-hidden sm:h-72">
                                         <Image
                                             src={project.image}
-                                            alt={project.title}
+                                            alt={`${project.title} project preview`}
                                             width={1200}
                                             height={800}
                                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
