@@ -12,12 +12,19 @@ import { SKILLS } from "@/constants/skills";
 import { SOCIAL_LINKS } from "@/constants/social-links";
 import { SERVICES } from "@/constants/services";
 
-
 export default function HomePage() {
-    const [lang, setLang] = useState(() => {
-        if (typeof window === "undefined") return "en";
-        return localStorage.getItem("lang") || "en";
-    });
+    // 1. Set default state ke "en" agar sama dengan hasil render server
+    const [lang, setLang] = useState("en");
+    const [mounted, setMounted] = useState(false);
+
+    // 2. Gunakan useEffect untuk mengambil localStorage hanya setelah komponen di-mount (Client-side)
+    useEffect(() => {
+        setMounted(true);
+        const savedLang = localStorage.getItem("lang");
+        if (savedLang) {
+            setLang(savedLang);
+        }
+    }, []);
 
     const changeLang = (newLang) => {
         setLang(newLang);
@@ -26,96 +33,6 @@ export default function HomePage() {
 
     const githubLink = SOCIAL_LINKS.find(({ name }) => name === "GitHub");
     const t = translations[lang];
-
-    const projectSchemaItems = PROJECTS.map((project) => {
-        const projectData = t.projects.items[project.translationKey];
-        const programmingLanguages = project.technologies.filter((tech) =>
-            ["Next.js", "React", "Laravel", "PHP", "TypeScript", "JavaScript", "Flutter", "Dart", "Tailwind CSS"].includes(tech)
-        );
-
-        return {
-            "@type": "SoftwareApplication",
-            name: project.title,
-            description: projectData.description,
-            url: project.liveUrl || "https://rendyachmad.my.id",
-            applicationCategory: "DeveloperApplication",
-            operatingSystem: ["Web", "Cross-platform"],
-            programmingLanguage: programmingLanguages,
-            author: {
-                "@type": "Person",
-                name: "Rendy Achmadiansyah Mukti",
-            },
-            publisher: {
-                "@type": "Organization",
-                name: "Rendy Achmadiansyah Mukti Portfolio",
-            },
-            image: `https://rendyachmad.my.id${project.image}`,
-        };
-    });
-
-    const personSchema = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Person",
-                name: "Rendy Achmadiansyah Mukti",
-                url: "https://rendyachmad.my.id",
-                image: "https://rendyachmad.my.id/images/og-image.png",
-                description:
-                    "Fullstack Web Developer specializing in Laravel, Next.js, React, PHP, and scalable backend development.",
-                jobTitle: "Fullstack Web Developer",
-                email: "mailto:rendyachmad55@gmail.com",
-                nationality: {
-                    "@type": "Country",
-                    name: "Indonesia",
-                },
-                alumniOf: {
-                    "@type": "CollegeOrUniversity",
-                    name: "UPN Veteran Jawa Timur",
-                },
-                knowsLanguage: ["Indonesian", "English"],
-                sameAs: [
-                    "https://github.com/rndyachmad",
-                    "https://linkedin.com/in/rendyachmad/",
-                    "https://instagram.com/rendyachmad.m",
-                ],
-                knowsAbout: SKILLS.flatMap((item) => item.items),
-                hasOccupation: {
-                    "@type": "Occupation",
-                    name: "Fullstack Web Developer",
-                    description: "Building scalable web applications and backend systems.",
-                },
-                worksFor: {
-                    "@type": "Organization",
-                    name: "Freelance / Independent Development",
-                },
-            },
-            {
-                "@type": "WebSite",
-                name: "Rendy Achmadiansyah Mukti Portfolio",
-                url: "https://rendyachmad.my.id",
-                description:
-                    "Portfolio website of Rendy Achmadiansyah Mukti featuring projects, services, experience, and contact information.",
-                inLanguage: "id-ID",
-                publisher: {
-                    "@id": "https://rendyachmad.my.id/#person",
-                },
-            },
-            {
-                "@type": "Organization",
-                "@id": "https://rendyachmad.my.id/#organization",
-                name: "Rendy Achmadiansyah Mukti Portfolio",
-                url: "https://rendyachmad.my.id",
-                sameAs: [
-                    "https://github.com/rndyachmad",
-                    "https://linkedin.com/in/rendyachmad/",
-                    "https://instagram.com/rendyachmad.m",
-                ],
-                logo: "https://rendyachmad.my.id/images/og-image.png",
-            },
-            ...projectSchemaItems,
-        ],
-    };
 
     const skillDiagrams = [
         { name: "Laravel / PHP", percentage: 90, icon: "fab fa-laravel" },
@@ -127,10 +44,6 @@ export default function HomePage() {
 
     return (
         <div className="min-h-screen flex flex-col bg-[#0c0c0c] text-white font-sans selection:bg-orange-500 selection:text-black">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-            />
 
             <header>
                 <Navbar lang={lang} setLang={changeLang} t={t} />
