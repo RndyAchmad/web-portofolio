@@ -1,5 +1,5 @@
 export const SITE_URL = "https://rendyachmad.my.id";
-export const HOME_URL = SITE_URL;
+export const HOME_URL = `${SITE_URL}/`;
 
 export const PERSON_NAME = "Rendy Achmadiansyah Mukti";
 export const PERSON_ALTERNATE_NAMES = [
