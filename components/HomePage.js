@@ -72,7 +72,7 @@ export default function HomePage() {
                             </p>
                             <h1
                                 id="home-title"
-                                className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+                                className="mb-4 max-w-2xl text-balance text-2xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl"
                             >
                                 <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-orange-600 drop-shadow-[0_0_30px_rgba(249,115,22,0.4)]">
                                     Rendy Achmadiansyah Mukti
