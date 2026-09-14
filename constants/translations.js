@@ -1,6 +1,6 @@
 export const translations = {
     en: {
-        nav: { home: "home", education: "education", tech: "tech", experience: "experience", connect: "connect", project: "projects" },
+        nav: { home: "home", about: "about", education: "education", tech: "tech", experience: "experience", connect: "connect", project: "projects" },
         hero: {
             badge: "Ready to build something great? Let's connect!",
             greet: "Hello, I'm",
@@ -8,6 +8,7 @@ export const translations = {
             subDescription: "Proven experience in developing ERP systems and content automation solutions with a focus on clean code and performance.",
             cta_cv: "View CV",
             cta_github: "GitHub Portfolio",
+            cta_about: "Learn more about Rendy Achmadiansyah Mukti",
             cv_file: "/dokumen/cv-rendy-en.pdf"
         },
         about: {
@@ -147,7 +148,7 @@ export const translations = {
         },
     },
     id: {
-        nav: { home: "beranda", education: "pendidikan", tech: "teknologi", experience: "pengalaman", connect: "hubungi", project: "proyek" },
+        nav: { home: "beranda", about: "tentang", education: "pendidikan", tech: "teknologi", experience: "pengalaman", connect: "hubungi", project: "proyek" },
         hero: {
             badge: "Siap membangun hal hebat? Mari terhubung!",
             greet: "Halo, Saya",
@@ -155,6 +156,7 @@ export const translations = {
             subDescription: "Pengalaman terbukti dalam mengembangkan sistem ERP dan solusi otomatisasi konten dengan fokus pada kode yang bersih dan performa.",
             cta_cv: "Lihat CV",
             cta_github: "Portofolio GitHub",
+            cta_about: "Pelajari lebih lanjut tentang Rendy Achmadiansyah Mukti",
             cv_file: "/dokumen/cv-rendy-id.pdf"
         },
         about: {

@@ -1,19 +1,47 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { startTransition, useEffect, useState } from "react";
+import { translations } from "@/constants/translations";
 
 const NAV_ITEMS = [
   { href: "/", key: "home" },
-  { href: "#education", key: "education" },
-  { href: "#tech-stack", key: "tech" },
-  { href: "#experience", key: "experience" },
-  { href: "#projects", key: "project" },
-  { href: "#connect", key: "connect" },
+  { href: "/about", key: "about" },
+  { href: "/#education", key: "education" },
+  { href: "/#tech-stack", key: "tech" },
+  { href: "/#experience", key: "experience" },
+  { href: "/#projects", key: "project" },
+  { href: "/#connect", key: "connect" },
 ];
 
-export default function Navbar({ lang, setLang, t }) {
+export default function Navbar({ lang: controlledLang, setLang: controlledSetLang, t: controlledTranslations }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [localLang, setLocalLang] = useState("en");
+  const isControlled = Boolean(controlledSetLang && controlledTranslations);
+
+  useEffect(() => {
+    if (isControlled) return;
+
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang && translations[savedLang]) {
+      startTransition(() => {
+        setLocalLang(savedLang);
+      });
+    }
+  }, [isControlled]);
+
+  const lang = isControlled ? controlledLang : localLang;
+  const t = controlledTranslations || translations[lang];
+
+  const changeLang = (newLang) => {
+    if (isControlled) {
+      controlledSetLang(newLang);
+      return;
+    }
+
+    setLocalLang(newLang);
+    localStorage.setItem("lang", newLang);
+  };
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -46,7 +74,7 @@ export default function Navbar({ lang, setLang, t }) {
           <div className="flex items-center gap-2 rounded-md border border-white/10 bg-surface px-2 py-1 font-mono text-[10px]">
             <button
               type="button"
-              onClick={() => setLang("en")}
+              onClick={() => changeLang("en")}
               aria-label="Switch language to English"
               aria-pressed={lang === "en"}
               className={`px-1 transition hover:text-orange-500 ${lang === "en"
@@ -59,7 +87,7 @@ export default function Navbar({ lang, setLang, t }) {
             <span className="text-white opacity-20">|</span>
             <button
               type="button"
-              onClick={() => setLang("id")}
+              onClick={() => changeLang("id")}
               aria-label="Switch language to Indonesian"
               aria-pressed={lang === "id"}
               className={`px-1 transition hover:text-orange-500 ${lang === "id"

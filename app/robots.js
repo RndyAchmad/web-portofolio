@@ -1,4 +1,4 @@
-const siteUrl = "https://rendyachmad.my.id";
+import { SITE_URL } from "@/constants/site";
 
 export default function robots() {
     return {
@@ -6,10 +6,7 @@ export default function robots() {
             {
                 userAgent: "*",
                 allow: "/",
-                disallow: [
-                    "/api/",
-                    "/_next/",
-                ],
+                disallow: ["/api/"],
             },
             {
                 userAgent: "GPTBot",
@@ -29,7 +26,7 @@ export default function robots() {
             },
         ],
 
-        sitemap: `${siteUrl}/sitemap.xml`,
-        host: siteUrl,
+        sitemap: `${SITE_URL}/sitemap.xml`,
+        host: SITE_URL,
     };
 }

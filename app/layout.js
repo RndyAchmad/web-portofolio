@@ -1,5 +1,14 @@
 import { Figtree, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import {
+  DEFAULT_OG_IMAGE_URL,
+  HOME_URL,
+  PERSON_JOB_TITLE,
+  PERSON_NAME,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+} from "@/constants/site";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -13,38 +22,30 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
-const siteUrl = "https://rendyachmad.my.id";
-
-const defaultTitle =
-  "Rendy Achmadiansyah Mukti | Fullstack Web Developer";
-
-const defaultDescription =
-  "Fullstack Web Developer from Indonesia specializing in Laravel, Next.js, React, PHP, and scalable backend development. Explore my portfolio, professional experience, technical skills, and projects.";
+const defaultTitle = `${PERSON_NAME} | ${PERSON_JOB_TITLE}`;
 
 export const metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
 
   title: {
     default: defaultTitle,
     template: "%s | Rendy Achmadiansyah Mukti",
   },
 
-  description: defaultDescription,
+  description: SITE_DESCRIPTION,
 
   keywords: [
     "Rendy Achmadiansyah Mukti",
-    "Rendy Achmad",
+    PERSON_NAME,
     "Fullstack Web Developer",
     "Backend Developer",
-    "Laravel Developer",
-    "Next.js Developer",
-    "React Developer",
-    "PHP Developer",
-    "Web Developer Indonesia",
-    "Portfolio",
+    "Laravel",
+    "Next.js",
+    "React",
+    "PHP",
   ],
 
-  applicationName: "Rendy Achmadiansyah Mukti Portfolio",
+  applicationName: `${PERSON_NAME} Portfolio`,
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -52,8 +53,8 @@ export const metadata = {
   },
   category: "technology",
   classification: "Portfolio Website",
-  creator: "Rendy Achmadiansyah Mukti",
-  publisher: "Rendy Achmadiansyah Mukti",
+  creator: PERSON_NAME,
+  publisher: PERSON_NAME,
   referrer: "origin-when-cross-origin",
   formatDetection: {
     telephone: false,
@@ -62,12 +63,12 @@ export const metadata = {
   },
   authors: [
     {
-      name: "Rendy Achmadiansyah Mukti",
-      url: siteUrl,
+      name: PERSON_NAME,
+      url: HOME_URL,
     },
   ],
   alternates: {
-    canonical: siteUrl,
+    canonical: "/",
   },
   robots: {
     index: true,
@@ -85,28 +86,27 @@ export const metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "id_ID",
-    alternateLocale: "en_US",
-    url: siteUrl,
-    siteName: "Rendy Achmadiansyah Mukti",
+    locale: "en_US",
+    url: HOME_URL,
+    siteName: SITE_NAME,
     title: defaultTitle,
-    description: defaultDescription,
+    description: SITE_DESCRIPTION,
     images: [
       {
-        url: `${siteUrl}/images/og-image.png`,
+        url: DEFAULT_OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Rendy Achmadiansyah Mukti Portfolio",
+        alt: "Rendy Achmadiansyah Mukti - Fullstack Web Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
-    description: defaultDescription,
+    description: SITE_DESCRIPTION,
     creator: "@rndyachmad",
     site: "@rndyachmad",
-    images: [`${siteUrl}/images/og-image.png`],
+    images: [DEFAULT_OG_IMAGE_URL],
   },
   icons: {
     icon: "/icon.svg",

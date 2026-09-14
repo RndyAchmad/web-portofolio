@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { startTransition, useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TechAnimation from "@/components/TechAnimation";
@@ -15,14 +16,13 @@ import { SERVICES } from "@/constants/services";
 export default function HomePage() {
     // 1. Set default state ke "en" agar sama dengan hasil render server
     const [lang, setLang] = useState("en");
-    const [mounted, setMounted] = useState(false);
-
     // 2. Gunakan useEffect untuk mengambil localStorage hanya setelah komponen di-mount (Client-side)
     useEffect(() => {
-        setMounted(true);
         const savedLang = localStorage.getItem("lang");
-        if (savedLang) {
-            setLang(savedLang);
+        if (savedLang && translations[savedLang]) {
+            startTransition(() => {
+                setLang(savedLang);
+            });
         }
     }, []);
 
@@ -67,23 +67,31 @@ export default function HomePage() {
                                 {t.hero.badge}
                             </div>
 
+                            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-orange-400 sm:text-base">
+                                {t.hero.greet}
+                            </p>
                             <h1
                                 id="home-title"
                                 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
                             >
-                                {t.hero.greet}
                                 <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-orange-600 drop-shadow-[0_0_30px_rgba(249,115,22,0.4)]">
-                                    {" "}Rendy
+                                    Rendy Achmadiansyah Mukti
                                 </span>
                             </h1>
 
                             <div className="mb-10 max-w-2xl space-y-5">
                                 <p className="text-base font-light leading-relaxed text-gray-300 sm:text-lg lg:text-xl">
-                                    Rendy Achmadiansyah Mukti is a Fullstack Web Developer, Backend Developer, Laravel Developer, Next.js Developer, and Web Developer Indonesia focused on building reliable and scalable digital products.
+                                    {t.hero.description}
                                 </p>
                                 <p className="border-l-[3px] border-orange-500/70 py-1 pl-4 text-sm font-light italic leading-relaxed text-gray-400 sm:text-base lg:pl-5">
                                     {t.hero.subDescription}
                                 </p>
+                                <Link
+                                    href="/about"
+                                    className="inline-flex text-sm font-semibold text-orange-400 transition-colors hover:text-orange-300"
+                                >
+                                    {t.hero.cta_about} →
+                                </Link>
                             </div>
 
                             <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:justify-center lg:justify-start">
@@ -469,25 +477,28 @@ export default function HomePage() {
                                             ))}
                                         </div>
 
-                                        <div className="mt-auto pt-2">
+                                        <div className="mt-auto flex flex-wrap gap-3 pt-2">
+                                            <Link
+                                                href={`/projects/${project.slug}`}
+                                                aria-label={`Read details about ${project.title}`}
+                                                className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-black transition-all hover:bg-orange-400"
+                                            >
+                                                {t.projects.viewProject}
+                                            </Link>
                                             {hasLiveDemo ? (
                                                 <a
                                                     href={project.liveUrl}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     aria-label={`Visit ${project.title} project demo`}
-                                                    className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-black transition-all hover:bg-orange-400"
+                                                    className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-[#1f1f1f] px-5 py-2.5 text-sm font-bold text-white transition-all hover:border-orange-500/50 hover:text-orange-400"
                                                 >
-                                                    View Project
+                                                    Visit Project
                                                 </a>
                                             ) : (
-                                                <button
-                                                    type="button"
-                                                    disabled
-                                                    className="inline-flex cursor-not-allowed items-center justify-center rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-gray-500"
-                                                >
+                                                <span className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-gray-500">
                                                     Private Repository
-                                                </button>
+                                                </span>
                                             )}
                                         </div>
                                     </div>
