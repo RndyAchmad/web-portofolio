@@ -68,6 +68,17 @@ export const translations = {
             title: "Professional Experience",
             description: "A timeline of my professional growth and the impact I've made in various roles.",
             items: {
+                pmi: {
+                    period: "September 2026 - Present",
+                    key: [
+                        "Develop and maintain applications to support operational and administrative needs at PMI Surabaya UDD.",
+                        "Perform bug fixing, troubleshooting, and investigation of various application issues.",
+                        "Develop and customize application features based on user requirements and business processes.",
+                        "Perform server maintenance and monitoring to ensure applications and services remain operational.",
+                        "Troubleshoot application, database, and server issues while analyzing errors to identify and resolve root causes.",
+                        "Perform testing and validation after fixes and feature development to ensure the system meets operational requirements.",
+                    ],
+                },
                 angsar: {
                     period: "January 2026 - June 2026",
                     key: [
@@ -216,6 +227,17 @@ export const translations = {
             title: "Pengalaman Profesional",
             description: "Rekam jejak pertumbuhan profesional dan dampak yang saya berikan dalam berbagai peran.",
             items: {
+                pmi: {
+                    period: "September 2026 - Sekarang",
+                    key: [
+                        "Melakukan pengembangan dan pemeliharaan aplikasi untuk mendukung kebutuhan operasional dan administrasi PMI Surabaya UDD.",
+                        "Melakukan perbaikan bug, troubleshooting, dan investigasi terhadap berbagai permasalahan pada aplikasi.",
+                        "Mengembangkan dan menyesuaikan fitur aplikasi berdasarkan kebutuhan pengguna dan proses bisnis.",
+                        "Melakukan maintenance dan monitoring server untuk memastikan aplikasi dan layanan berjalan dengan baik.",
+                        "Melakukan troubleshooting pada aplikasi, database, dan server serta menganalisis error untuk menemukan dan menyelesaikan akar permasalahan.",
+                        "Melakukan pengujian dan validasi setelah perbaikan maupun pengembangan untuk memastikan sistem berjalan sesuai kebutuhan.",
+                    ],
+                },
                 angsar: {
                     period: "Januari 2026 - Juni 2026",
                     key: [

@@ -1,5 +1,11 @@
 export const EXPERIENCES = [
   {
+    role: "IT Programmer",
+    company: "UDD PMI Kota Surabaya",
+    logo: "/images/logo-pmi.png",
+    translationKey: "pmi",
+  },
+  {
     role: "Fullstack Developer",
     company: "PT. Angsar Inspirasi Digital",
     logo: "/images/logo-pt-angsar.png",
