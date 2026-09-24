@@ -6,7 +6,7 @@ export const EXPERIENCES = [
     translationKey: "pmi",
   },
   {
-    role: "Fullstack Developer",
+    role: "Fullstack Web Developer",
     company: "PT. Angsar Inspirasi Digital",
     logo: "/images/logo-pt-angsar.png",
     translationKey: "angsar",
