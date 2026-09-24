@@ -1,7 +1,7 @@
 export const EXPERIENCES = [
   {
     role: "IT Programmer",
-    company: "UDD PMI Kota Surabaya",
+    company: "UTD PMI Kota Surabaya",
     logo: "/images/logo-pmi.png",
     translationKey: "pmi",
   },
